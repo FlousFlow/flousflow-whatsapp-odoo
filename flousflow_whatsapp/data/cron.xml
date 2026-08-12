@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cron_whatsapp_presence_reconcile" model="ir.cron">
+            <field name="name">WhatsApp: Reconcile Presence and Assignments</field>
+            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_reconcile_presence()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="cron_whatsapp_update_sla" model="ir.cron">
+            <field name="name">WhatsApp: Update SLA Status</field>
+            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_update_sla()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="cron_whatsapp_nonce_gc" model="ir.cron">
+            <field name="name">WhatsApp: Remove Expired Connector Nonces</field>
+            <field name="model_id" ref="model_flousflow_whatsapp_connector_nonce"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_gc_expired()</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="cron_whatsapp_fail_stale_outbound" model="ir.cron">
+            <field name="name">WhatsApp: Fail Stale Outbound Messages</field>
+            <field name="model_id" ref="model_flousflow_whatsapp_message"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_fail_stale_outbound()</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

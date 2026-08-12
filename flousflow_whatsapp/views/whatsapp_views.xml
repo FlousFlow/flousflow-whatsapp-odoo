@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_whatsapp_team_list" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.team.list</field>
+    <field name="model">flousflow.whatsapp.team</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name"/>
+        <field name="company_id" groups="base.group_multi_company"/>
+        <field name="member_ids" widget="many2many_tags"/>
+        <field name="supervisor_ids" widget="many2many_tags"/>
+        <field name="active"/>
+      </list>
+    </field>
+  </record>
+  <record id="view_whatsapp_team_form" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.team.form</field>
+    <field name="model">flousflow.whatsapp.team</field>
+    <field name="arch" type="xml">
+      <form string="WhatsApp Team">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="company_id" groups="base.group_multi_company"/>
+            <field name="work_calendar_id"/>
+            <field name="active"/>
+          </group>
+          <notebook>
+            <page string="Agents">
+              <field name="member_ids" widget="many2many_tags"/>
+            </page>
+            <page string="Supervisors">
+              <field name="supervisor_ids" widget="many2many_tags"/>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="action_whatsapp_teams" model="ir.actions.act_window">
+    <field name="name">Teams</field>
+    <field name="res_model">flousflow.whatsapp.team</field>
+    <field name="view_mode">list,form</field>
+  </record>
+  <record id="view_whatsapp_number_list" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.number.list</field>
+    <field name="model">flousflow.whatsapp.number</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name"/>
+        <field name="phone_number"/>
+        <field name="company_id" groups="base.group_multi_company"/>
+        <field name="primary_team_id"/>
+        <field name="state" widget="badge" decoration-success="state == 'connected'" decoration-danger="state == 'error'"/>
+        <field name="attachment_limit_mb"/>
+      </list>
+    </field>
+  </record>
+  <record id="view_whatsapp_number_form" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.number.form</field>
+    <field name="model">flousflow.whatsapp.number</field>
+    <field name="arch" type="xml">
+      <form string="WhatsApp Number">
+        <header>
+          <button name="action_connector_connect" type="object" string="Connect / Show QR"
+                  class="oe_highlight" groups="flousflow_whatsapp.group_whatsapp_admin"
+                  invisible="state == 'connected'"/>
+          <button name="action_connector_disconnect" type="object" string="Disconnect"
+                  groups="flousflow_whatsapp.group_whatsapp_admin"
+                  invisible="state not in ['qr', 'connecting', 'connected', 'reconnect', 'error']"
+                  confirm="Disconnect this WhatsApp session?"/>
+          <button name="action_open_cleanup_wizard" type="object"
+                  string="Clean Synchronized Data" class="btn-secondary"
+                  groups="flousflow_whatsapp.group_whatsapp_admin"/>
+          <field name="state" widget="statusbar" statusbar_visible="draft,qr,connecting,connected,reconnect,error,disabled"/>
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="phone_number"/>
+              <field name="company_id" groups="base.group_multi_company"/>
+              <field name="primary_team_id"/>
+              <field name="allowed_team_ids" widget="many2many_tags"/>
+            </group>
+            <group>
+              <field name="manager_user_id"/>
+              <field name="assignment_mode"/>
+              <field name="allow_inbound"/>
+              <field name="allow_outbound"/>
+              <field name="active"/>
+            </group>
+          </group>
+          <notebook>
+            <page string="Direct Access">
+              <field name="member_line_ids">
+                <list editable="bottom">
+                  <field name="user_id"/>
+                  <field name="access_mode"/>
+                  <field name="active"/>
+                </list>
+              </field>
+            </page>
+            <page string="SLA &amp; Files">
+              <group>
+                <field name="first_response_minutes"/>
+                <field name="reply_response_minutes"/>
+                <field name="escalation_minutes"/>
+                <field name="attachment_limit_mb"/>
+                <field name="enforce_service_window"/>
+                <field name="service_window_hours" invisible="not enforce_service_window"/>
+              </group>
+            </page>
+            <page string="Connector" groups="flousflow_whatsapp.group_whatsapp_admin">
+              <group>
+                <field name="connector_session_key"/>
+                <field name="connector_version"/>
+                <field name="connector_last_probe_at"/>
+                <field name="connector_pending_events"/>
+                <field name="last_connected_at"/>
+                <field name="last_error_summary"/>
+              </group>
+              <field name="qr_image" widget="whatsapp_auto_refresh_qr" readonly="1"/>
+            </page>
+          </notebook>
+        </sheet>
+        <chatter/>
+      </form>
+    </field>
+  </record>
+  <record id="action_whatsapp_numbers" model="ir.actions.act_window">
+    <field name="name">Numbers</field>
+    <field name="res_model">flousflow.whatsapp.number</field>
+    <field name="view_mode">list,form</field>
+  </record>
+  <record id="view_whatsapp_conversation_search" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.conversation.search</field>
+    <field name="model">flousflow.whatsapp.conversation</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+        <field name="partner_id"/>
+        <field name="assigned_user_id"/>
+        <field name="number_id"/>
+        <filter name="my_conversations" string="My Conversations" domain="[('assigned_user_id', '=', uid)]"/>
+        <filter name="unassigned" string="Unassigned" domain="[('assigned_user_id', '=', False)]"/>
+        <group>
+          <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+          <filter name="group_agent" string="Agent" context="{'group_by': 'assigned_user_id'}"/>
+          <filter name="group_number" string="Number" context="{'group_by': 'number_id'}"/>
+        </group>
+      </search>
+    </field>
+  </record>
+  <record id="view_whatsapp_conversation_list" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.conversation.list</field>
+    <field name="model">flousflow.whatsapp.conversation</field>
+    <field name="arch" type="xml">
+      <list create="0" delete="0">
+        <field name="name"/>
+        <field name="customer_display_name"/>
+        <field name="partner_id"/>
+        <field name="customer_phone_normalized"/>
+        <field name="number_id"/>
+        <field name="team_id"/>
+        <field name="assigned_user_id"/>
+        <field name="state" widget="badge"/>
+        <field name="sla_state" widget="badge" decoration-danger="sla_state == 'breached'" decoration-warning="sla_state == 'warning'"/>
+        <field name="last_message_at"/>
+      </list>
+    </field>
+  </record>
+  <record id="view_whatsapp_conversation_form" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.conversation.form</field>
+    <field name="model">flousflow.whatsapp.conversation</field>
+    <field name="arch" type="xml">
+      <form string="WhatsApp Conversation" create="0" delete="0">
+        <header>
+          <button name="action_open_transfer_wizard" type="object" string="Transfer"/>
+          <button name="action_open_takeover_wizard" type="object" string="Take Over" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
+          <field name="state" widget="statusbar" statusbar_visible="new,unassigned,open,waiting_customer,waiting_internal,escalated,resolved,closed"/>
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="customer_display_name"/>
+              <field name="partner_id"/>
+              <field name="lead_id"/>
+              <field name="customer_phone_normalized"/>
+            </group>
+            <group>
+              <field name="number_id"/>
+              <field name="team_id"/>
+              <field name="assigned_user_id"/>
+              <field name="priority"/>
+            </group>
+          </group>
+          <group string="SLA">
+            <field name="first_customer_message_at"/>
+            <field name="first_response_at"/>
+            <field name="response_due_at"/>
+            <field name="sla_state" widget="badge"/>
+          </group>
+          <notebook>
+            <page string="WhatsApp Messages">
+              <field name="whatsapp_message_ids" readonly="1">
+                <list create="0" delete="0">
+                  <field name="create_date"/>
+                  <field name="direction"/>
+                  <field name="author_user_id"/>
+                  <field name="message_type"/>
+                  <field name="body"/>
+                  <field name="state" widget="badge"/>
+                </list>
+              </field>
+            </page>
+          </notebook>
+        </sheet>
+        <chatter/>
+      </form>
+    </field>
+  </record>
+  <record id="action_whatsapp_conversations" model="ir.actions.act_window">
+    <field name="name">Conversations</field>
+    <field name="res_model">flousflow.whatsapp.conversation</field>
+    <field name="view_mode">list,form</field>
+    <field name="search_view_id" ref="view_whatsapp_conversation_search"/>
+  </record>
+  <record id="action_whatsapp_inbox" model="ir.actions.client">
+    <field name="name">WhatsApp Inbox</field>
+    <field name="tag">flousflow_whatsapp.inbox</field>
+  </record>
+  <record id="view_whatsapp_failed_message_list" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.message.failed.list</field>
+    <field name="model">flousflow.whatsapp.message</field>
+    <field name="arch" type="xml">
+      <list create="0" edit="0" delete="0" decoration-danger="state == 'failed'">
+        <field name="create_date"/>
+        <field name="number_id"/>
+        <field name="conversation_id"/>
+        <field name="message_type"/>
+        <field name="state" widget="badge"/>
+        <field name="attempt_count"/>
+        <field name="error_code"/>
+        <field name="error_summary"/>
+        <field name="next_attempt_at"/>
+        <button name="action_retry_failed" type="object" string="Retry Now" class="btn-primary" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
+      </list>
+    </field>
+  </record>
+  <record id="action_whatsapp_failed_messages" model="ir.actions.act_window">
+    <field name="name">Failed Messages</field>
+    <field name="res_model">flousflow.whatsapp.message</field>
+    <field name="view_mode">list</field>
+    <field name="domain">[('direction', '=', 'outbound'), ('state', '=', 'failed')]</field>
+    <field name="view_id" ref="view_whatsapp_failed_message_list"/>
+  </record>
+  <record id="view_whatsapp_presence_list" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.presence.interval.list</field>
+    <field name="model">flousflow.whatsapp.presence.interval</field>
+    <field name="arch" type="xml">
+      <list create="0" edit="0" delete="0">
+        <field name="user_id"/>
+        <field name="employee_id"/>
+        <field name="status" widget="badge"/>
+        <field name="started_at"/>
+        <field name="ended_at"/>
+        <field name="duration_seconds"/>
+        <field name="online_seconds"/>
+      </list>
+    </field>
+  </record>
+  <record id="view_whatsapp_presence_pivot" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.presence.interval.pivot</field>
+    <field name="model">flousflow.whatsapp.presence.interval</field>
+    <field name="arch" type="xml">
+      <pivot string="WhatsApp Availability">
+        <field name="employee_id" type="row"/>
+        <field name="started_at" interval="day" type="col"/>
+        <field name="online_seconds" type="measure"/>
+      </pivot>
+    </field>
+  </record>
+  <record id="view_whatsapp_presence_graph" model="ir.ui.view">
+    <field name="name">flousflow.whatsapp.presence.interval.graph</field>
+    <field name="model">flousflow.whatsapp.presence.interval</field>
+    <field name="arch" type="xml">
+      <graph string="WhatsApp Online Time" type="bar">
+        <field name="employee_id"/>
+        <field name="online_seconds" type="measure"/>
+      </graph>
+    </field>
+  </record>
+  <record id="action_whatsapp_presence" model="ir.actions.act_window">
+    <field name="name">Availability</field>
+    <field name="res_model">flousflow.whatsapp.presence.interval</field>
+    <field name="view_mode">list,pivot,graph</field>
+  </record>
+</odoo>

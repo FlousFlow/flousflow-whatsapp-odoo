@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="flousflow_whatsapp.WhatsappInbox" owl="1">
+        <div class="o_ff_wa_inbox d-flex h-100 bg-view">
+            <aside class="o_ff_wa_sidebar border-end d-flex flex-column">
+                <div class="p-3 border-bottom">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div><h3 class="mb-0">WhatsApp</h3><small class="text-muted">Shared team inbox</small></div>
+                        <button class="btn btn-light btn-sm" t-on-click="loadConversations" title="Refresh"><i class="fa fa-refresh"/></button>
+                    </div>
+                    <div class="btn-group btn-group-sm w-100">
+                        <button t-att-class="'btn ' + (state.filter === 'all' ? 'btn-primary' : 'btn-outline-secondary')" t-on-click="() => state.filter = 'all'">All</button>
+                        <button t-att-class="'btn ' + (state.filter === 'unassigned' ? 'btn-primary' : 'btn-outline-secondary')" t-on-click="() => state.filter = 'unassigned'">Unassigned</button>
+                        <button t-att-class="'btn ' + (state.filter === 'breached' ? 'btn-primary' : 'btn-outline-secondary')" t-on-click="() => state.filter = 'breached'">SLA</button>
+                    </div>
+                    <div t-if="state.numbers.length" class="o_ff_wa_number_switcher mt-2 d-flex gap-1 flex-wrap">
+                        <button t-att-class="'btn btn-sm ' + (state.numberFilter === 'all' ? 'btn-dark' : 'btn-outline-secondary')"
+                                t-on-click="() => state.numberFilter = 'all'">
+                            <i class="fa fa-th-large me-1"/><t t-esc="'All'"/>
+                        </button>
+                        <button t-foreach="state.numbers" t-as="number" t-key="number.id"
+                                t-att-class="'btn btn-sm ' + (state.numberFilter === number.id ? 'btn-dark' : 'btn-outline-secondary')"
+                                t-on-click="() => state.numberFilter = number.id">
+                            <i class="fa fa-phone me-1"/><t t-esc="number.name"/>
+                        </button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bg-white"><i class="fa fa-search"/></span>
+                            <input class="form-control" t-model="state.search" placeholder="Search name or phone..."/>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_ff_wa_conversation_list flex-grow-1 overflow-auto">
+                    <div t-if="state.loading" class="p-4 text-center text-muted"><i class="fa fa-spinner fa-spin me-2"/>Loading conversations</div>
+                    <button t-foreach="filteredConversations" t-as="conversation" t-key="conversation.id"
+                            t-att-class="'o_ff_wa_conversation border-0 border-bottom text-start w-100 p-3 ' + (state.selected?.id === conversation.id ? 'active' : '')"
+                            t-on-click="() => this.selectConversation(conversation)">
+                        <div class="d-flex justify-content-between gap-2">
+                            <strong class="text-truncate" t-esc="conversationName(conversation)"/>
+                            <span t-if="conversation.unread_count" class="o_ff_wa_unread_badge badge rounded-pill text-bg-danger flex-shrink-0" t-esc="conversation.unread_count"/>
+                        </div>
+                        <div class="o_ff_wa_conversation_phone text-muted text-truncate" t-esc="conversationPhone(conversation)"/>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small class="text-muted text-truncate">
+                                <span t-if="conversation.customer_typing" class="o_ff_wa_typing_hint text-success fw-semibold"><i class="fa fa-pencil me-1"/>typing…</span>
+                                <span t-else="" t-esc="conversation.assigned_user_id?.[1] || 'Unassigned'"/>
+                            </small>
+                            <span t-if="conversation.sla_state === 'breached'" class="badge text-bg-danger">SLA</span>
+                        </div>
+                    </button>
+                    <div t-if="!state.loading and !filteredConversations.length" class="p-4 text-center text-muted">No conversations in this view.</div>
+                </div>
+            </aside>
+
+            <main class="o_ff_wa_thread flex-grow-1 d-flex flex-column" t-if="state.selected">
+                <header class="p-3 border-bottom bg-white d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5 class="mb-0">
+                            <t t-esc="conversationName(state.selected)"/>
+                            <span t-if="state.selected.customer_typing" class="o_ff_wa_typing_hint text-success fw-semibold fs-6 ms-2"><i class="fa fa-pencil me-1"/>typing…</span>
+                        </h5>
+                        <small class="text-muted"><t t-esc="conversationPhone(state.selected)"/> · <t t-esc="state.selected.number_id?.[1]"/> · <t t-esc="state.selected.team_id?.[1]"/></small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-outline-danger btn-sm" t-on-click="closeConversation"
+                                t-att-disabled="!state.selected.lead_id and !state.lock.owned_by_me and !state.lock.locked">
+                            <i class="fa fa-check-circle-o me-1"/>
+                            Close
+                        </button>
+                        <div t-if="state.documentActions.length" class="dropdown">
+                            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fa fa-file-pdf-o me-1"/>Send Document
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <button t-foreach="state.documentActions" t-as="documentAction" t-key="documentAction.key"
+                                        class="dropdown-item" t-on-click="() => this.openDocumentWizard(documentAction.key)">
+                                    <i t-att-class="(documentAction.icon || 'fa fa-file-pdf-o') + ' me-2'"/>
+                                    <t t-esc="documentAction.label"/>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm" t-on-click="openLead"
+                                t-att-disabled="!state.selected.lead_id and !state.lock.owned_by_me"
+                                t-att-title="!state.selected.lead_id and !state.lock.owned_by_me ? 'Assign the conversation to yourself first' : ''">
+                            <i class="fa fa-filter me-1"/>
+                            <t t-esc="state.selected.lead_id ? 'Open Lead' : 'Create Lead'"/>
+                        </button>
+                        <span t-att-class="'badge ' + (state.selected.sla_state === 'breached' ? 'text-bg-danger' : 'text-bg-light')" t-esc="state.selected.sla_state"/>
+                    </div>
+                </header>
+                <div t-if="state.externalReplyDetected" class="o_ff_wa_external_reply_banner alert alert-warning rounded-0 mb-0 py-2 px-3 d-flex align-items-center justify-content-between gap-3">
+                    <span><i class="fa fa-mobile me-2"/>A reply was sent from the WhatsApp phone. Review it before continuing. Your draft was preserved.</span>
+                    <button class="btn btn-warning btn-sm text-nowrap" t-on-click="resumeAfterExternalReply">
+                        <i class="fa fa-check me-1"/>Reviewed — Continue
+                    </button>
+                </div>
+                <div t-elif="state.lock.locked and !state.lock.owned_by_me" class="o_ff_wa_lock_banner alert alert-warning rounded-0 mb-0 py-2 px-3">
+                    <i class="fa fa-lock me-2"/><strong t-esc="state.lock.owner_name"/> is handling this conversation. You have read-only access.
+                </div>
+                <div t-elif="!state.selected.assigned_user_id" class="o_ff_wa_claim_banner border-bottom p-2 px-3 d-flex align-items-center justify-content-between gap-3">
+                    <span class="text-muted"><i class="fa fa-inbox me-2"/>This conversation is unassigned.</span>
+                    <button class="btn btn-primary btn-sm" t-on-click="claimConversation">
+                        <i class="fa fa-hand-paper-o me-1"/>Assign to me
+                    </button>
+                </div>
+                <div t-elif="!state.lock.owned_by_me" class="o_ff_wa_lock_banner alert alert-info rounded-0 mb-0 py-2 px-3">
+                    <i class="fa fa-user me-2"/>Assigned to <strong t-esc="state.selected.assigned_user_id?.[1] || state.lock.assigned_user_name"/>. You have read-only access.
+                </div>
+                <div class="o_ff_wa_messages flex-grow-1 overflow-auto p-4">
+                    <div t-foreach="state.messages" t-as="message" t-key="message.id" t-att-class="'d-flex mb-3 ' + (message.direction === 'outbound' ? 'justify-content-end' : 'justify-content-start')">
+                        <div t-att-class="'o_ff_wa_bubble p-2 px-3 ' + (message.direction === 'outbound' ? 'outbound' : 'inbound')">
+                            <div t-if="message.message_type !== 'text'" class="small fw-semibold text-uppercase mb-1" t-esc="message.message_type"/>
+                            <audio t-if="message.message_type === 'audio' and message.attachment_id"
+                                   class="o_ff_wa_audio d-block" controls="controls" preload="metadata"
+                                   t-att-src="attachmentUrl(message)"/>
+                            <a t-if="message.message_type === 'image' and message.attachment_id"
+                               class="o_ff_wa_image_link d-block" t-att-href="attachmentUrl(message)" target="_blank">
+                                <img class="o_ff_wa_image" t-att-src="attachmentUrl(message)"
+                                     t-att-alt="message.attachment_name || 'WhatsApp image'"/>
+                            </a>
+                            <div t-if="message.message_type === 'document' and message.attachment_id"
+                                 class="o_ff_wa_document d-flex align-items-center gap-2 p-2">
+                                <i class="fa fa-file-o fa-2x"/>
+                                <div class="flex-grow-1 overflow-hidden">
+                                    <a class="fw-semibold text-truncate d-block" target="_blank"
+                                       t-att-href="attachmentUrl(message)" t-esc="message.attachment_name || 'Document'"/>
+                                    <small class="opacity-75" t-esc="formatFileSize(message.attachment_size)"/>
+                                </div>
+                                <a class="btn btn-sm btn-light" t-att-href="attachmentDownloadUrl(message)" title="Download">
+                                    <i class="fa fa-download"/>
+                                </a>
+                            </div>
+                            <div t-if="message.body" class="text-break mt-1" t-esc="message.body"/>
+                            <div t-elif="!message.attachment_id and message.message_type !== 'audio'" class="text-break">Attachment unavailable</div>
+                            <span t-if="message.source === 'whatsapp_device'" class="badge text-bg-secondary mt-2">
+                                <i class="fa fa-mobile me-1"/>Sent from WhatsApp phone
+                            </span>
+                            <small t-if="message.direction === 'outbound'" class="o_ff_wa_receipt d-block text-end opacity-75 mt-1"
+                                   t-att-class="message.state === 'read' ? 'o_ff_wa_receipt read d-block text-end mt-1' : 'o_ff_wa_receipt d-block text-end opacity-75 mt-1'"
+                                   t-att-title="receiptTitle(message)">
+                                <i t-if="receiptIcon(message)" t-att-class="'fa fa-' + receiptIcon(message)"/>
+                                <i t-if="['delivered', 'read'].includes(message.state)" class="fa fa-check o_ff_wa_second_check"/>
+                                <span class="ms-1" t-esc="receiptTitle(message)"/>
+                            </small>
+                            <small t-else="" class="d-block text-end opacity-75 mt-1">Received</small>
+                        </div>
+                    </div>
+                    <div t-if="!state.messages.length" class="h-100 d-flex align-items-center justify-content-center text-muted">No messages yet.</div>
+                </div>
+                <footer class="o_ff_wa_composer border-top bg-white p-3">
+                    <div t-if="state.attachment" class="alert alert-light border py-2 d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1 overflow-hidden">
+                            <span><i class="fa fa-paperclip me-2"/><t t-esc="state.attachment.filename"/></span>
+                            <audio t-if="state.recordingPreviewUrl" class="o_ff_wa_audio_preview d-block mt-2 w-100"
+                                   controls="controls" preload="metadata" t-att-src="state.recordingPreviewUrl"/>
+                        </div>
+                        <button class="btn btn-sm btn-link text-danger" t-on-click="removeAttachment">Remove</button>
+                    </div>
+                    <div t-if="state.recording" class="o_ff_wa_recording_status d-flex align-items-center gap-2 mb-2 text-danger">
+                        <span class="o_ff_wa_recording_dot"/><strong>Recording</strong><span t-esc="recordingTime"/>
+                        <div class="o_ff_wa_level_meter d-flex align-items-end gap-1 ms-2" title="Microphone level">
+                            <span class="o_ff_wa_level_bar" t-att-class="'o_ff_wa_level_bar ' + (state.recordingLevel > 0.25 ? 'active' : '')"
+                                  t-att-style="'height:' + Math.max(8, Math.round(state.recordingLevel * 100)) + '%'"/>
+                        </div>
+                        <button class="btn btn-sm btn-link text-danger ms-auto" t-on-click="cancelRecording">Cancel</button>
+                    </div>
+                    <div class="d-flex gap-2 align-items-end">
+                        <input t-ref="fileInput" type="file" class="d-none" t-on-change="onFileChange"
+                               accept="image/jpeg,image/png,application/pdf,.doc,.docx,.xls,.xlsx,audio/ogg,audio/mpeg,audio/mp4"/>
+                        <div class="o_ff_wa_emoji_wrap position-relative">
+                            <button class="btn btn-light" t-on-click="toggleEmoji" t-att-disabled="!state.lock.owned_by_me or state.recording" title="Emoji">
+                                <i class="fa fa-smile-o"/>
+                            </button>
+                            <div t-if="state.showEmoji" class="o_ff_wa_emoji_picker card position-absolute bottom-100 start-0 shadow-sm p-2">
+                                <button t-foreach="emojiList" t-as="emoji" t-key="emoji" class="o_ff_wa_emoji btn p-0" t-on-click="() => this.insertEmoji(emoji)">
+                                    <t t-esc="emoji"/>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn-light" t-on-click="() => fileInput.el.click()" t-att-disabled="!state.lock.owned_by_me or state.recording" title="Attach file"><i class="fa fa-paperclip"/></button>
+                        <button t-att-class="'o_ff_wa_record_button btn ' + (state.recording ? 'btn-danger' : 'btn-light')"
+                                t-on-click="toggleRecording"
+                                t-att-disabled="!state.lock.owned_by_me or state.sending or (state.attachment and !state.recording)"
+                                t-att-title="state.recording ? 'Stop recording' : 'Record voice message'">
+                            <i t-att-class="state.recording ? 'fa fa-stop' : 'fa fa-microphone'"/>
+                        </button>
+                        <textarea class="form-control" rows="2" placeholder="Write a reply..." t-model="state.draft" t-att-disabled="!state.lock.owned_by_me or state.recording"/>
+                        <button class="btn btn-primary px-4" t-on-click="sendMessage" t-att-disabled="!canSend"><i t-att-class="state.sending ? 'fa fa-spinner fa-spin' : 'fa fa-paper-plane'"/></button>
+                    </div>
+                </footer>
+            </main>
+            <main t-else="" class="flex-grow-1 d-flex align-items-center justify-content-center text-muted"><div class="text-center"><i class="fa fa-comments-o fa-3x mb-3"/><h5>Select a conversation</h5></div></main>
+        </div>
+    </t>
+</templates>

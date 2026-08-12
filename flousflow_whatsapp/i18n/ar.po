@@ -1,0 +1,2861 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* flousflow_whatsapp
+#
+
+msgid ""
+msgstr "Project-Id-Version: Odoo Server 19.0\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2026-07-21 11:54+0000\nPO-Revision-Date: 2026-07-21 11:54+0000\nLast-Translator: \nLanguage-Team: Arabic\nLanguage: ar_001\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: \nPlural-Forms: \n"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "%(label)s: %(phone)s"
+msgstr "%(label)s: %(phone)s"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "%(user)s is already handling this conversation."
+msgstr "المستخدم %(user)s يتولى هذه المحادثة بالفعل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "%(user)s is assigned to this conversation."
+msgstr "المستخدم %(user)s معيّن لهذه المحادثة."
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.report,print_report_name:flousflow_whatsapp.action_report_flousflow_partner_statement
+msgid "'Statement-%s-%s' % (object.partner_id.display_name or 'Partner', object.date_to)"
+msgstr "'Statement-%s-%s' % (object.partner_id.display_name or 'Partner', object.date_to)"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "(before"
+msgstr "(قبل"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid ". You have read-only access."
+msgstr ". لديك صلاحية القراءة فقط."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "<span class=\"ms-1\">MB</span>"
+msgstr "<span class=\"ms-1\">ميجابايت</span>"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_employee_form_whatsapp
+msgid "<span class=\"o_stat_text\">Hand Over</span>"
+msgstr "<span class=\"o_stat_text\">تسليم</span>"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Closing Balance</strong>"
+msgstr "<strong>الرصيد الختامي</strong>"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Currency</strong>:"
+msgstr "<strong>العملة</strong>:"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Entries</strong>: All"
+msgstr "<strong>الحركات</strong>: الكل"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Entries</strong>: Posted"
+msgstr "<strong>الحركات</strong>: المرحلة"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Opening Balance</strong>"
+msgstr "<strong>الرصيد الافتتاحي</strong>"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Payable</strong>: opening"
+msgstr "<strong>دائن</strong>: افتتاح"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Period</strong>:"
+msgstr "<strong>الفترة</strong>:"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Receivable</strong>: opening"
+msgstr "<strong>مدين</strong>: افتتاح"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "<strong>Totals</strong>"
+msgstr "<strong>الإجماليات</strong>"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "A contact name is required."
+msgstr "اسم جهة الاتصال مطلوب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "A conversation summary is required."
+msgstr "ملخص المحادثة مطلوب."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "A reply was sent from the WhatsApp phone. Review it before continuing. Your draft was preserved."
+msgstr "تم إرسال رد من هاتف واتساب. راجعه قبل المتابعة. تم الاحتفاظ بمسودتك."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "A reply was sent from the WhatsApp phone. Review it before continuing; your draft was preserved."
+msgstr "تم إرسال رد من هاتف واتساب. راجعه قبل المتابعة؛ تم الاحتفاظ بمسودتك."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_number_member_number_user_unique
+msgid "A user can have only one direct rule per WhatsApp number."
+msgstr "يمكن أن يكون للمستخدم قاعدة وصول مباشرة واحدة فقط لكل رقم واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/connector_event.py:0
+msgid "A valid customer phone number is required."
+msgstr "رقم هاتف صحيح للعميل مطلوب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/connector_event.py:0
+msgid "A valid number and external message ID are required."
+msgstr "يلزم رقم صحيح ومعرّف رسالة خارجي."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_transfer__state__accepted
+msgid "Accepted"
+msgstr "تم القبول"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__accepted_at
+msgid "Accepted At"
+msgstr "وقت القبول"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__access_mode
+msgid "Access Mode"
+msgstr "وضع الوصول"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__account_type
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__account_type
+msgid "Account Type"
+msgstr "نوع الحساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__account_count
+msgid "Accounts"
+msgstr "الحسابات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__acquired_at
+msgid "Acquired At"
+msgstr "وقت الاستحواذ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_needaction
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__active
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__active
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__active
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_exception_decoration
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_state
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_type_icon
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__actor_user_id
+msgid "Actor User"
+msgstr "المستخدم المنفذ"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "Add a valid mobile or phone number to this customer first."
+msgstr "أضف رقم موبايل أو هاتف صحيح لهذا العميل أولاً."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__allowed_team_ids
+msgid "Additional Allowed Teams"
+msgstr "الفرق الإضافية المسموح لها"
+
+#. module: flousflow_whatsapp
+#: model:res.groups,name:flousflow_whatsapp.group_whatsapp_admin
+msgid "Administrator"
+msgstr "المدير"
+
+#. module: flousflow_whatsapp
+#: model:res.groups,name:flousflow_whatsapp.group_whatsapp_agent
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_search
+msgid "Agent"
+msgstr "الوكيل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__offline
+msgid "Agent Offline"
+msgstr "الموظف غير متصل"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "Agent notes"
+msgstr "ملاحظات الموظف"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_lead_wizard_form
+msgid "Agent notes and agreed next steps..."
+msgstr "ملاحظات الموظف والخطوات التالية المتفق عليها..."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_team_form
+msgid "Agents"
+msgstr "الوكلاء"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "All"
+msgstr "الكل"
+
+#. module: flousflow_whatsapp
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_all_conversations
+msgid "All Conversations"
+msgstr "جميع المحادثات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_partner_statement_wizard__target_move__all
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_statement_document_wizard__target_move__all
+msgid "All Entries"
+msgstr "كل القيود"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/number.py:0
+msgid "All WhatsApp teams must belong to the number company."
+msgstr "يجب أن تنتمي جميع فرق واتساب إلى شركة الرقم."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number_member__access_mode__allow
+msgid "Allow"
+msgstr "السماح"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__allow_inbound
+msgid "Allow Inbound"
+msgstr "السماح بالوارد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__allow_outbound
+msgid "Allow Outbound"
+msgstr "السماح بالصادر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__allowed_number_ids
+msgid "Allowed Number"
+msgstr "الرقم المسموح"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__allowed_user_ids
+msgid "Allowed User"
+msgstr "المستخدم المسموح به"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "An outbound idempotency key is required."
+msgstr "مفتاح منع تكرار الإرسال مطلوب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+msgid "Assign this conversation to yourself before creating a CRM lead."
+msgstr "عيّن هذه المحادثة لنفسك قبل إنشاء عميل محتمل."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Assign to me"
+msgstr "إسنادها لي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__assigned_at
+msgid "Assigned At"
+msgstr "وقت التعيين"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__assigned_user_id
+msgid "Assigned User"
+msgstr "المستخدم المعيّن"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Assigned to"
+msgstr "تم إسنادها إلى"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__assignment_mode
+msgid "Assignment Mode"
+msgstr "طريقة التعيين"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__assignment_release_at
+msgid "Assignment Release At"
+msgstr "وقت إلغاء التعيين"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Attach file"
+msgstr "إرفاق ملف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__attachment_id
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_attachment_count
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__attachment_limit_mb
+msgid "Attachment Limit Mb"
+msgstr "حد المرفق بالميجابايت"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Attachment unavailable"
+msgstr "المرفق غير متاح"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__attempt_count
+msgid "Attempt Count"
+msgstr "عدد المحاولات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__audio
+msgid "Audio"
+msgstr "صوت"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Audio recording is not supported by this browser."
+msgstr "تسجيل الصوت غير مدعوم في هذا المتصفح."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__author_user_id
+msgid "Author User"
+msgstr "المستخدم الكاتب"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.act_window,name:flousflow_whatsapp.action_whatsapp_presence
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_presence
+msgid "Availability"
+msgstr "التوافر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__status__away
+msgid "Away"
+msgstr "بعيد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__balance
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__blocked
+msgid "Blocked"
+msgstr "محجوب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__body
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__body
+msgid "Body"
+msgstr "المتن"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__sla_state__breached
+msgid "Breached"
+msgstr "متجاوز"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "CRM Lead"
+msgstr "عميل محتمل"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "CRM lead %s was created from this conversation."
+msgstr "تم إنشاء العميل المحتمل %s من هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_handover_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_lead_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_document_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_order_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_statement_document_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_takeover_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_transfer_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_transfer__state__cancelled
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__caption
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__caption
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__caption
+msgid "Caption"
+msgstr "التسمية"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/transfer.py:0
+msgid "Choose either one target user or one target team."
+msgstr "اختر مستخدمًا مستهدفًا واحدًا أو فريقًا مستهدفًا واحدًا."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__client_idempotency_key
+msgid "Client Idempotency Key"
+msgstr "مفتاح منع التكرار لدى العميل"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__closing_balance
+msgid "Closing Balance"
+msgstr "الرصيد الختامي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "الكيان التجاري"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__company_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__close
+msgid "Composer Closed"
+msgstr "محرر الرسالة مغلق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات"
+
+#. module: flousflow_whatsapp
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_configuration
+msgid "Configuration"
+msgstr "التهيئة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__connected
+msgid "Connected"
+msgstr "متصل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__connecting
+msgid "Connecting"
+msgstr "جارٍ الاتصال"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_number_form
+msgid "Connector"
+msgstr "موصل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__connector_session_key
+msgid "Connector Session Key"
+msgstr "مفتاح جلسة الموصل"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "Connector URL"
+msgstr "رابط الموصل"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "Connector and File Limits"
+msgstr "الموصل وحدود الملفات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__contact_name
+msgid "Contact Name"
+msgstr "اسم جهة الاتصال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__conversation_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__conversation_id
+msgid "Conversation"
+msgstr "المحادثة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__transfer
+msgid "Conversation Transferred"
+msgstr "تم تحويل المحادثة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+msgid "Conversation, number, and team must belong to one company."
+msgstr "يجب أن تنتمي المحادثة والرقم والفريق إلى شركة واحدة."
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.act_window,name:flousflow_whatsapp.action_whatsapp_conversations
+msgid "Conversations"
+msgstr "المحادثات"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+msgid "Conversations with history cannot be deleted."
+msgstr "لا يمكن حذف المحادثات التي لها سجل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__correlation_id
+msgid "Correlation"
+msgstr "معرّف الربط"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Could not load WhatsApp conversations."
+msgstr "تعذر تحميل محادثات واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Could not open this WhatsApp conversation."
+msgstr "تعذر فتح محادثة واتساب هذه."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_lead_wizard_form
+msgid "Create & Open"
+msgstr "إنشاء وفتح"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_lead_wizard_form
+msgid "Create CRM Lead"
+msgstr "إنشاء عميل محتمل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_lead_wizard
+msgid "Create CRM Lead from WhatsApp"
+msgstr "إنشاء عميل محتمل من واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__create_lead_automatically
+msgid "Create Lead Automatically"
+msgstr "إنشاء عميل محتمل تلقائيًا"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,website_form_label:flousflow_whatsapp.model_crm_lead
+msgid "Create an Opportunity"
+msgstr "إنشاء فرصة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+msgid "Create the CRM lead and contact before sending customer documents."
+msgstr "أنشئ العميل المحتمل وجهة الاتصال قبل إرسال مستندات العميل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__create_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__create_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__credit
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Credit"
+msgstr "دائن"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__currency_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__partner_id
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__source__customer
+msgid "Customer"
+msgstr "العميل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_partner_statement_wizard__account_type__both
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_statement_document_wizard__account_type__both
+msgid "Customer & Vendor"
+msgstr "عميل ومورد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_partner_statement_wizard__account_type__receivable
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_statement_document_wizard__account_type__receivable
+msgid "Customer / Receivable"
+msgstr "عميل / ذمم مدينة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__customer_phone_normalized
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__phone
+msgid "Customer Phone Normalized"
+msgstr "هاتف العميل الموحّد"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/document_provider.py:0
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Customer Statement"
+msgstr "كشف حساب العميل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__customer_phone
+msgid "Customer WhatsApp Number"
+msgstr "رقم واتساب العميل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__date
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__debit
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Debit"
+msgstr "مدين"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__delivered
+msgid "Delivered"
+msgstr "تم التوصيل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__delivered_at
+msgid "Delivered At"
+msgstr "وقت التسليم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__denied_user_ids
+msgid "Denied User"
+msgstr "المستخدم المحظور"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number_member__access_mode__deny
+msgid "Deny"
+msgstr "رفض"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__name
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Description"
+msgstr "الوصف"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_number_form
+msgid "Direct Access"
+msgstr "الوصول المباشر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__member_line_ids
+msgid "Direct User Rules"
+msgstr "قواعد وصول المستخدمين المباشر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__direction
+msgid "Direction"
+msgstr "الاتجاه"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__disabled
+msgid "Disabled"
+msgstr "معطل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_document_provider__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_media_policy__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_mail_presence__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_partner__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_users__display_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_sale_order__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__status__busy
+msgid "Do Not Disturb"
+msgstr "عدم الإزعاج"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__document
+msgid "Document"
+msgstr "المستند"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Download"
+msgstr "تنزيل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__duration_seconds
+msgid "Duration Seconds"
+msgstr "المدة بالثواني"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_hr_employee
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__employee_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__date_to
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__ended_at
+msgid "Ended At"
+msgstr "وقت الانتهاء"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/number.py:0
+msgid "Enter a valid WhatsApp phone number."
+msgstr "أدخل رقم هاتف واتساب صحيحًا."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "Enter one valid customer email address."
+msgstr "أدخل عنوان بريد إلكتروني صحيحًا واحدًا للعميل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__error
+msgid "Error"
+msgstr "خطأ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__error_code
+msgid "Error Code"
+msgstr "رمز الخطأ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__error_summary
+msgid "Error Summary"
+msgstr "ملخص الخطأ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__escalated
+msgid "Escalated"
+msgstr "تصعيد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__escalation_minutes
+msgid "Escalation Minutes"
+msgstr "دقائق التصعيد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__event_type
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__event_type
+msgid "Event Type"
+msgstr "نوع الفعالية"
+
+#. module: flousflow_whatsapp
+#: model:res.groups,name:flousflow_whatsapp.group_whatsapp_executive
+msgid "Executive Viewer"
+msgstr "مشاهد تنفيذي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__expires_at
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__expires_at
+msgid "Expires At"
+msgstr "وقت الانتهاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__external_event_id
+msgid "External Event"
+msgstr "حدث خارجي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__external_message_id
+msgid "External Message"
+msgstr "رسالة خارجية"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__failed
+msgid "Failed"
+msgstr "فشل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__attachment_size
+msgid "File Size"
+msgstr "حجم الملف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__first_customer_message_at
+msgid "First Customer Message At"
+msgstr "وقت أول رسالة من العميل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__first_response_at
+msgid "First Response At"
+msgstr "وقت أول رد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__first_response_minutes
+msgid "First Response Minutes"
+msgstr "دقائق أول رد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_audit_event
+msgid "Flous Flow WhatsApp Audit Event"
+msgstr "حدث تدقيق واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_canned_reply
+msgid "Flous Flow WhatsApp Canned Reply"
+msgstr "رد واتساب جاهز في Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_connector_event
+msgid "Flous Flow WhatsApp Connector Event"
+msgstr "حدث موصل واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_connector_nonce
+msgid "Flous Flow WhatsApp Connector Nonce"
+msgstr "رمز طلب موصل واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_conversation
+msgid "Flous Flow WhatsApp Conversation"
+msgstr "محادثة واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_conversation_lock
+msgid "Flous Flow WhatsApp Conversation Lock"
+msgstr "قفل محادثة واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_media_policy
+msgid "Flous Flow WhatsApp Media Policy"
+msgstr "سياسة وسائط واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_message
+msgid "Flous Flow WhatsApp Message"
+msgstr "رسالة واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_number
+msgid "Flous Flow WhatsApp Number"
+msgstr "رقم واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_number_member
+msgid "Flous Flow WhatsApp Number User Rule"
+msgstr "قاعدة مستخدم رقم واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_presence_interval
+msgid "Flous Flow WhatsApp Presence Interval"
+msgstr "فترة تواجد واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_team
+msgid "Flous Flow WhatsApp Team"
+msgstr "فريق واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_transfer
+msgid "Flous Flow WhatsApp Transfer"
+msgstr "تحويل واتساب Flous Flow"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_follower_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_partner_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_type_icon
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font awesome مثال: fa-tasks"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Generated on"
+msgstr "أُنشئ في"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "Global Attachment Cap"
+msgstr "الحد العام للمرفقات"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_handover_wizard_form
+msgid "Hand Over"
+msgstr "تسليم"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_handover_wizard_form
+msgid "Hand Over Conversations"
+msgstr "تسليم المحادثات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_handover_wizard
+msgid "Hand Over Employee WhatsApp Conversations"
+msgstr "تسليم محادثات واتساب الخاصة بالموظف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__has_message
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__heartbeat_at
+msgid "Heartbeat At"
+msgstr "وقت آخر نبضة اتصال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_crm_lead__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_document_provider__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_media_policy__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_hr_employee__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_mail_presence__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_config_settings__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_partner__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_users__id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_exception_icon
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_exception_icon
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_needaction
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_error
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_sms_error
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_error
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__image
+msgid "Image"
+msgstr "صورة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__priority__1
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_lead_wizard__priority__1
+msgid "Important"
+msgstr "مهم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__direction__inbound
+msgid "Inbound"
+msgstr "واردة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/connector_event.py:0
+msgid "Inbound attachment content is not valid base64."
+msgstr "محتوى المرفق الوارد ليس Base64 صحيحًا."
+
+#. module: flousflow_whatsapp
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_conversations
+msgid "Inbox"
+msgstr "صندوق الوارد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__include_reconciled
+msgid "Include Reconciled"
+msgstr "تضمين المطابقات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__include_reconciled
+msgid "Include Reconciled Entries"
+msgstr "تضمين القيود المطابقة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "Invalid conversation lock release reason."
+msgstr "سبب تحرير قفل المحادثة غير صحيح."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_is_follower
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__last_assigned_user_id
+msgid "Last Assigned Agent"
+msgstr "آخر موظف معيّن"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__last_connected_at
+msgid "Last Connected At"
+msgstr "وقت آخر اتصال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__last_error_summary
+msgid "Last Error Summary"
+msgstr "ملخص آخر خطأ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__last_message_at
+msgid "Last Message At"
+msgstr "وقت آخر رسالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__write_uid
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__write_date
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_crm_lead
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__lead_id
+msgid "Lead"
+msgstr "عميل مهتم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__timeout
+msgid "Lease Timeout"
+msgstr "مهلة حجز المحادثة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__assignment_mode__least_open_round_robin
+msgid "Least Open, then Round Robin"
+msgstr "الأقل في المحادثات المفتوحة ثم التوزيع بالتناوب"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Loading conversations"
+msgstr "جارٍ تحميل المحادثات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__assignment_mode__manual
+msgid "Manual Claim"
+msgstr "استلام يدوي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__source__manual
+msgid "Manual Profile Status"
+msgstr "حالة الملف الشخصي اليدوية"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__member_ids
+msgid "Members"
+msgstr "الأعضاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__message_id
+msgid "Message"
+msgstr "الرسالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_error
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__message_type
+msgid "Message Type"
+msgstr "نوع الرسالة"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Message was not queued. Your draft was preserved."
+msgstr "لم تتم إضافة الرسالة إلى قائمة الإرسال. تم الاحتفاظ بمسودتك."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__metadata_json
+msgid "Metadata Json"
+msgstr "بيانات JSON الوصفية"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Microphone permission was denied."
+msgstr "تم رفض إذن استخدام الميكروفون."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__attachment_mimetype
+msgid "Mime Type"
+msgstr "نوع تنسيق الملف"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "Mobile"
+msgstr "موبايل"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "More than one contact in this company uses the same %s. Merge or correct the contacts first."
+msgstr "تستخدم أكثر من جهة اتصال في هذه الشركة نفس %s. ادمج جهات الاتصال أو صححها أولًا."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "More than one shared contact uses the same %s. Merge or correct the contacts first."
+msgstr "تستخدم أكثر من جهة اتصال مشتركة نفس %s. ادمج جهات الاتصال أو صححها أولًا."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_search
+msgid "My Conversations"
+msgstr "محادثاتي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__attachment_name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__name
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__new
+msgid "New"
+msgstr "جديد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_date_deadline
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_summary
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_type_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__next_attempt_at
+msgid "Next Attempt At"
+msgstr "وقت المحاولة التالية"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "No conversations in this view."
+msgstr "لا توجد محادثات في هذا العرض."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "No messages yet."
+msgstr "لا توجد رسائل بعد."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/statement.py:0
+msgid "No reconcilable %(type)s accounts were found for this company."
+msgstr "لا توجد حسابات %(type)s قابلة للمطابقة لهذه الشركة."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "No supported audio recording format is available."
+msgstr "لا توجد صيغة تسجيل صوتي مدعومة."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_nonce__nonce
+msgid "Nonce"
+msgstr "رمز الطلب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__priority__0
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_lead_wizard__priority__0
+msgid "Normal"
+msgstr "عادي"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "Not delivered to the connector within %s minutes."
+msgstr "لم يتم تسليمها إلى الموصل خلال %s دقيقة."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__notes
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__number_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__number_id
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_search
+msgid "Number"
+msgstr "عدد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__manager_user_id
+msgid "Number Manager"
+msgstr "مسؤول الرقم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_needaction_counter
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_error_counter
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_needaction_counter
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_error_counter
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.act_window,name:flousflow_whatsapp.action_whatsapp_numbers
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_numbers
+msgid "Numbers"
+msgstr "الأرقام"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__occurred_at
+msgid "Occurred At"
+msgstr "وقت الحدوث"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__source__odoo
+msgid "Odoo"
+msgstr "أودو"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__source__presence
+msgid "Odoo Presence"
+msgstr "حالة التواجد في Odoo"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__status__offline
+msgid "Offline"
+msgstr "غير متصل بالإنترنت"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__sla_state__ok
+msgid "On Time"
+msgstr "في الموعد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__status__online
+msgid "Online"
+msgstr "عبر الإنترنت"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__online_seconds
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_employee_form_whatsapp
+msgid "Online Seconds"
+msgstr "ثواني الاتصال"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "Only WhatsApp agents can claim conversations."
+msgstr "يمكن لموظفي واتساب فقط استلام المحادثات."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/handover.py:0
+msgid "Only a WhatsApp supervisor can hand over employee conversations."
+msgstr "يمكن لمشرف واتساب فقط تسليم محادثات الموظف."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/takeover.py:0
+msgid "Only a WhatsApp supervisor can take over a conversation."
+msgstr "يمكن لمشرف واتساب فقط الاستحواذ على محادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "Only authorized WhatsApp agents can send quotations."
+msgstr "يمكن لوكلاء الواتساب المصرح لهم فقط إرسال عروض الأسعار."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "Only the assigned agent can create a lead from this conversation."
+msgstr "يمكن للموظف المعيّن فقط إنشاء عميل محتمل من هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "Only the assigned agent can reply to this conversation."
+msgstr "يمكن للموظف المعيّن فقط الرد على هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+msgid "Only the assigned agent can send documents in this conversation."
+msgstr "يمكن للموظف المعيّن فقط إرسال مستندات في هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "Only the assigned agent can send in this conversation."
+msgstr "يمكن للموظف المعيّن فقط الإرسال في هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_document_wizard.py:0
+msgid "Only the assigned agent can send this quotation."
+msgstr "يمكن للوكيل المعين فقط إرسال عرض السعر هذا."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/statement_document_wizard.py:0
+msgid "Only the assigned agent can send this statement."
+msgstr "يمكن للوكيل المعين فقط إرسال كشف الحساب هذا."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/transfer.py:0
+msgid "Only the assignee or a supervisor can transfer this conversation."
+msgstr "يمكن للموظف المعيّن أو المشرف فقط تحويل هذه المحادثة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "Only the lock owner or a supervisor can release it."
+msgstr "يمكن لصاحب القفل أو المشرف فقط تحريره."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__open
+msgid "Open"
+msgstr "فتح"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "Open the composer and acquire the conversation lock before sending."
+msgstr "افتح محرر الرسالة واحجز المحادثة قبل الإرسال."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__opening_balance
+msgid "Opening Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_document_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_statement_document_wizard_form
+msgid "Optional message accompanying the PDF..."
+msgstr "رسالة اختيارية مصاحبة لملف PDF..."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_order_send_wizard_form
+msgid "Optional message accompanying the quotation PDF..."
+msgstr "رسالة اختيارية مصاحبة لملف PDF الخاص بعرض السعر..."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__direction__outbound
+msgid "Outbound"
+msgstr "صادرة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "Outbound WhatsApp messages are disabled for this number."
+msgstr "رسائل واتساب الصادرة معطلة لهذا الرقم."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__owner_user_id
+msgid "Owner User"
+msgstr "المستخدم المالك"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__partner_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__partner_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__partner_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__partner_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.act_window,name:flousflow_whatsapp.action_flousflow_partner_statement
+#: model:ir.actions.report,name:flousflow_whatsapp.action_report_flousflow_partner_statement
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_partner_statement_wizard
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_statement
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Partner Statement"
+msgstr "كشف حساب الشريك"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_partner_statement_line
+msgid "Partner Statement Line"
+msgstr "بند كشف حساب الشريك"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__sla_state__paused
+msgid "Paused"
+msgstr "متوقف مؤقتًا"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__closing_payable
+msgid "Payable Closing"
+msgstr "رصيد دائن ختامي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__opening_payable
+msgid "Payable Opening"
+msgstr "رصيد دائن افتتاحي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__payload_digest
+msgid "Payload Digest"
+msgstr "بصمة المحتوى"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_transfer__state__pending
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "Phone"
+msgstr "هاتف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__phone_normalized
+msgid "Phone Normalized"
+msgstr "رقم الهاتف الموحّد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__phone_number
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/statement_document_wizard.py:0
+msgid "Please find your account statement attached."
+msgstr "تجدون كشف الحساب مرفقاً."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_document_wizard.py:0
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+msgid "Please find your quotation attached."
+msgstr "تجدون عرض السعر مرفقاً."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_partner_statement_wizard__target_move__posted
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_statement_document_wizard__target_move__posted
+msgid "Posted Entries"
+msgstr "القيود المرحّلة"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Preview"
+msgstr "معاينة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__primary_team_id
+msgid "Primary Team"
+msgstr "الفريق الأساسي"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Print (PDF)"
+msgstr "طباعة (PDF)"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__priority
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__priority
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "Private URL of the QR-based WhatsApp connector service."
+msgstr "الرابط الخاص لخدمة موصل واتساب المعتمدة على رمز QR."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__processed_at
+msgid "Processed At"
+msgstr "وقت المعالجة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__customer_display_name
+msgid "Profile name reported by WhatsApp. This does not create a contact."
+msgstr "اسم الملف الشخصي الوارد من واتساب. لا يؤدي ذلك إلى إنشاء جهة اتصال."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/qr/auto_refresh_qr.xml:0
+msgid "QR refreshes automatically. Scan the currently displayed code."
+msgstr "يتم تحديث رمز QR تلقائيًا. امسح الرمز المعروض حاليًا."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__qr_image
+msgid "Qr Image"
+msgstr "صورة رمز QR"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__queued
+msgid "Queued"
+msgstr "في صف الانتظار"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/document_provider.py:0
+msgid "Quotation"
+msgstr "عرض السعر"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+msgid "Quotation queued for delivery to %(phone)s."
+msgstr "تمت إضافة عرض السعر إلى قائمة الانتظار للتسليم إلى %(phone)s."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__rating_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__read
+msgid "Read"
+msgstr "اقرأ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__read_at
+msgid "Read At"
+msgstr "وقت القراءة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_audit_event__reason
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__reason
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_takeover_wizard__reason
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__reason
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__closing_receivable
+msgid "Receivable Closing"
+msgstr "رصيد مدين ختامي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__opening_receivable
+msgid "Receivable Opening"
+msgstr "رصيد مدين افتتاحي"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__received
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_connector_event__received_at
+msgid "Received At"
+msgstr "تم الاستلام في"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_presence_interval__source__reconcile
+msgid "Reconciliation"
+msgstr "المطابقة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__reconnect
+msgid "Reconnect Required"
+msgstr "إعادة الاتصال مطلوبة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_hr_employee__whatsapp_online_seconds
+msgid "Recorded WhatsApp Online Seconds"
+msgstr "ثواني اتصال واتساب المسجلة"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Recording"
+msgstr "تسجيل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__move_name
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Refresh"
+msgstr "تحديث"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__release_reason
+msgid "Release Reason"
+msgstr "سبب التحرير"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__released_at
+msgid "Released At"
+msgstr "وقت التحرير"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Remove"
+msgstr "إزالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__reply_response_minutes
+msgid "Reply Response Minutes"
+msgstr "دقائق الاستجابة للرد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__external_reply
+msgid "Reply Sent from WhatsApp Phone"
+msgstr "رد مرسل من هاتف واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_reporting
+msgid "Reporting"
+msgstr "إعداد التقارير"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__requested_at
+msgid "Requested At"
+msgstr "وقت الطلب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_handover_wizard_form
+msgid "Required handover reason..."
+msgstr "سبب التسليم مطلوب..."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_lead_wizard_form
+msgid "Required summary of the customer's request and conversation..."
+msgstr "ملخص طلب العميل والمحادثة مطلوب..."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_takeover_wizard_form
+msgid "Required takeover reason..."
+msgstr "سبب الاستحواذ مطلوب..."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_transfer_wizard_form
+msgid "Required transfer reason..."
+msgstr "سبب التحويل مطلوب..."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__resolved
+msgid "Resolved"
+msgstr "تم الحل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__response_due_at
+msgid "Response Due At"
+msgstr "موعد استحقاق الرد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_user_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Reviewed — Continue"
+msgstr "تمت المراجعة — متابعة"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_form
+msgid "SLA"
+msgstr "اتفاقية مستوى الخدمة"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_number_form
+msgid "SLA & Files"
+msgstr "مستوى الخدمة والملفات"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_number_positive_sla
+msgid "SLA durations must be greater than zero."
+msgstr "يجب أن تكون مدد مستوى الخدمة أكبر من صفر."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__message_has_sms_error
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_document_wizard__sale_order_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_sale_order_send_wizard__sale_order_id
+msgid "Sale Order"
+msgstr "أمر بيع"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+msgid "Select a WhatsApp number registered on this customer."
+msgstr "حدد رقم واتساب مسجلاً على هذا العميل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+msgid "Select a connected WhatsApp number available to you."
+msgstr "حدد رقم واتساب متصلاً ومتاحاً لك."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Select a conversation"
+msgstr "اختر محادثة"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_document_wizard.py:0
+msgid "Select a quotation for this WhatsApp customer."
+msgstr "حدد عرض سعر لعميل الواتساب هذا."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_document_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_statement_document_wizard_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/document_provider.py:0
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_statement_document_wizard
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_statement_document_wizard_form
+msgid "Send Customer Statement by WhatsApp"
+msgstr "إرسال كشف حساب العميل عبر واتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Send Document"
+msgstr "إرسال مستند"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/document_provider.py:0
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_sale_document_wizard
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_document_wizard_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_order_send_wizard_form
+msgid "Send Quotation by WhatsApp"
+msgstr "إرسال عرض السعر عبر واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_sale_order_send_wizard
+msgid "Send Sale Quotation by WhatsApp"
+msgstr "إرسال عرض سعر البيع عبر واتساب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_order_form_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_sale_order_send_wizard_form
+msgid "Send via WhatsApp"
+msgstr "إرسال عبر واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__sending
+msgid "Sending"
+msgstr "جارِ الإرسال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__state__sent
+msgid "Sent"
+msgstr "تم الإرسال"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__sent_at
+msgid "Sent At"
+msgstr "وقت الإرسال"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Sent from WhatsApp phone"
+msgstr "مُرسلة من هاتف واتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Shared team inbox"
+msgstr "صندوق وارد مشترك للفريق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__sla_state
+msgid "Sla State"
+msgstr "حالة مستوى الخدمة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__source
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__source
+msgid "Source"
+msgstr "المصدر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__source_user_id
+msgid "Source User"
+msgstr "المستخدم المصدر"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__spam
+msgid "Spam"
+msgstr "البريد غير المرغوب فيه"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__date_from
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/statement.py:0
+#: code:addons/flousflow_whatsapp/wizards/statement_document_wizard.py:0
+msgid "Start date must be before or equal to end date."
+msgstr "يجب أن يكون تاريخ البداية قبل تاريخ النهاية أو مساوياً له."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__started_at
+msgid "Started At"
+msgstr "وقت البدء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__state
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_message__state
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__state
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__state
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__line_ids
+msgid "Statement Lines"
+msgstr "بنود كشف الحساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_state
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_state
+msgid "Status based on activities\nOverdue: Due date is already passed\nToday: Activity date is today\nPlanned: Future activities."
+msgstr "الأنشطة المعتمدة على الحالة\nالمتأخرة: تاريخ الاستحقاق مر\nاليوم: تاريخ النشاط هو اليوم\nالمخطط: الأنشطة المستقبلية."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__summary
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Summary"
+msgstr "الملخص"
+
+#. module: flousflow_whatsapp
+#: model:res.groups,name:flousflow_whatsapp.group_whatsapp_supervisor
+msgid "Supervisor"
+msgstr "مشرف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation_lock__release_reason__takeover
+msgid "Supervisor Takeover"
+msgstr "استحواذ المشرف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__supervisor_ids
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_team_form
+msgid "Supervisors"
+msgstr "المشرفون"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__system
+msgid "System"
+msgstr "النظام"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_takeover_wizard_form
+msgid "Take Over"
+msgstr "استحواذ"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_takeover_wizard_form
+msgid "Take Over Conversation"
+msgstr "الاستحواذ على المحادثة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_takeover_wizard
+msgid "Take Over WhatsApp Conversation"
+msgstr "الاستحواذ على محادثة واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__takeover_by_id
+msgid "Takeover By"
+msgstr "تم الاستحواذ بواسطة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation_lock__takeover_reason
+msgid "Takeover Reason"
+msgstr "سبب الاستحواذ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_statement_document_wizard__target_move
+msgid "Target Move"
+msgstr "الحركات المستهدفة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__target_move
+msgid "Target Moves"
+msgstr "الحركات المستهدفة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__target_team_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__target_team_id
+msgid "Target Team"
+msgstr "الفريق المستهدف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_handover_wizard__target_user_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer__target_user_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_transfer_wizard__target_user_id
+msgid "Target User"
+msgstr "المستخدم المستهدف"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_canned_reply__team_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__team_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__team_id
+msgid "Team"
+msgstr "الفريق"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.act_window,name:flousflow_whatsapp.action_whatsapp_teams
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_teams
+msgid "Teams"
+msgstr "الفِرَق"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__text
+msgid "Text"
+msgstr "النص"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The CRM lead could not be opened."
+msgstr "تعذر فتح العميل المحتمل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/media_policy.py:0
+msgid "The MP4 file is not a valid audio-only recording."
+msgstr "ملف MP4 ليس تسجيلًا صوتيًا صالحًا فقط."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/media_policy.py:0
+msgid "The WebM file is not a valid audio-only recording."
+msgstr "ملف WebM ليس تسجيلًا صوتيًا صالحًا فقط."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "The WhatsApp conversation no longer exists."
+msgstr "محادثة واتساب لم تعد موجودة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/connector_event.py:0
+msgid "The WhatsApp message direction is invalid."
+msgstr "اتجاه رسالة واتساب غير صحيح."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_team_name_company_unique
+msgid "The WhatsApp team name must be unique per company."
+msgstr "يجب أن يكون اسم فريق واتساب فريدًا داخل الشركة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/number.py:0
+msgid "The attachment limit cannot exceed the global cap of %s MB."
+msgstr "لا يمكن أن يتجاوز حد المرفق الحد العام البالغ %s ميجابايت."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_number_positive_attachment_limit
+msgid "The attachment limit must be greater than zero."
+msgstr "يجب أن يكون حد المرفق أكبر من صفر."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_number_session_company_unique
+msgid "The connector session key must be unique per company."
+msgstr "يجب أن يكون مفتاح جلسة الموصل فريدًا داخل الشركة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "The conversation contact conflicts with the entered phone or email. Correct the customer data before creating the lead."
+msgstr "تتعارض جهة اتصال المحادثة مع الهاتف أو البريد المدخل. صحح بيانات العميل قبل إنشاء العميل المحتمل."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The conversation could not be reopened for replies."
+msgstr "تعذر إعادة فتح المحادثة للرد."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The document could not be prepared for WhatsApp."
+msgstr "تعذر تجهيز المستند لواتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/handover.py:0
+msgid "The employee is not linked to an Odoo user."
+msgstr "الموظف غير مرتبط بمستخدم Odoo."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The file exceeds the 10 MB limit."
+msgstr "يتجاوز الملف حد 10 ميجابايت."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/media_policy.py:0
+msgid "The file exceeds the allowed WhatsApp attachment size."
+msgstr "يتجاوز الملف حجم مرفقات واتساب المسموح."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The microphone could not be started."
+msgstr "تعذر تشغيل الميكروفون."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "The phone number and email address belong to different contacts. Correct the customer data before creating the lead."
+msgstr "رقم الهاتف والبريد الإلكتروني تابعان لجهتي اتصال مختلفتين. صحح بيانات العميل قبل إنشاء العميل المحتمل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/sale_document_wizard.py:0
+msgid "The quotation and WhatsApp conversation must belong to one company."
+msgstr "يجب أن ينتمي عرض السعر ومحادثة الواتساب إلى شركة واحدة."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The recording exceeds the 10 MB limit."
+msgstr "يتجاوز التسجيل حد 10 ميجابايت."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/document_provider.py:0
+msgid "The selected WhatsApp document provider is unavailable."
+msgstr "موفر مستند واتساب المحدد غير متاح."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/wizards/transfer.py:0
+msgid "The target user cannot access this WhatsApp number."
+msgstr "لا يستطيع المستخدم المستهدف الوصول إلى رقم واتساب هذا."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "The voice recording was empty."
+msgstr "التسجيل الصوتي فارغ."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/number.py:0
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_number_phone_company_unique
+msgid "This WhatsApp number already exists for the company."
+msgstr "رقم واتساب هذا موجود بالفعل للشركة."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_connector_event_event_unique
+msgid "This connector event was already received."
+msgstr "تم استلام حدث الموصل هذا من قبل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_connector_nonce_nonce_unique
+msgid "This connector request nonce was already consumed."
+msgstr "تم استخدام رمز طلب الموصل هذا من قبل."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "This conversation could not be assigned to you."
+msgstr "تعذر تعيين هذه المحادثة لك."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "This conversation is no longer available for replies."
+msgstr "هذه المحادثة لم تعد متاحة للرد."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "This conversation is unassigned."
+msgstr "هذه المحادثة غير معيّنة."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_message_external_message_unique
+msgid "This external WhatsApp message was already processed."
+msgstr "تمت معالجة رسالة واتساب الخارجية هذه من قبل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/media_policy.py:0
+msgid "This file type is not allowed in WhatsApp conversations."
+msgstr "نوع الملف هذا غير مسموح في محادثات واتساب."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.constraint,message:flousflow_whatsapp.constraint_flousflow_whatsapp_message_client_key_unique
+msgid "This outbound WhatsApp request was already queued."
+msgstr "تمت إضافة طلب واتساب الصادر هذا إلى قائمة الإرسال من قبل."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__total_credit
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Total Credit"
+msgstr "إجمالي الدائن"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_wizard__total_debit
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_flousflow_partner_statement_wizard_form
+msgid "Total Debit"
+msgstr "إجمالي المدين"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_form
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_transfer_wizard_form
+msgid "Transfer"
+msgstr "تحويل"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_transfer_wizard_form
+msgid "Transfer Conversation"
+msgstr "تحويل المحادثة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_transfer_wizard
+msgid "Transfer WhatsApp Conversation"
+msgstr "تحويل محادثة واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__activity_exception_decoration
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__unassigned
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_search
+msgid "Unassigned"
+msgstr "غير مسند"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__priority__2
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_lead_wizard__priority__3
+msgid "Urgent"
+msgstr "عاجل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_res_users
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_lead_wizard__user_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number_member__user_id
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_presence_interval__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_mail_presence
+msgid "User/Guest Presence"
+msgstr "وجود المستخدم/الضيف"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "VAT:"
+msgstr "ضريبة القيمة المضافة:"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_partner_statement_wizard__account_type__payable
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_statement_document_wizard__account_type__payable
+msgid "Vendor / Payable"
+msgstr "مورد / ذمم دائنة"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "Vendor Statement"
+msgstr "كشف حساب المورد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_lead_wizard__priority__2
+msgid "Very Important"
+msgstr "مهم جدًا"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__message_type__video_metadata
+msgid "Video Metadata"
+msgstr "بيانات الفيديو الوصفية"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/media_policy.py:0
+msgid "Video files are not allowed in WhatsApp conversations."
+msgstr "ملفات الفيديو غير مسموح بها في محادثات واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.js:0
+msgid "Video or unsupported files cannot be sent."
+msgstr "لا يمكن إرسال ملفات الفيديو أو الملفات غير المدعومة."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__waiting_since
+msgid "Waiting Since"
+msgstr "في الانتظار منذ"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__waiting_customer
+msgid "Waiting for Customer"
+msgstr "في انتظار العميل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__state__waiting_internal
+msgid "Waiting for Internal Action"
+msgstr "في انتظار إجراء داخلي"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_number__state__qr
+msgid "Waiting for QR Scan"
+msgstr "في انتظار مسح رمز QR"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/qr/auto_refresh_qr.xml:0
+msgid "Waiting for the connector to generate a QR code."
+msgstr "في انتظار الموصل لإنشاء رمز QR."
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_conversation__sla_state__warning
+msgid "Warning"
+msgstr "تحذير"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__website_message_ids
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_number__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_conversation__website_message_ids
+#: model:ir.model.fields,help:flousflow_whatsapp.field_flousflow_whatsapp_number__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع الإلكتروني"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#. odoo-python
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+#: model:ir.ui.menu,name:flousflow_whatsapp.menu_whatsapp_root
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_crm_lead_form_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_employee_form_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_partner_form_whatsapp
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "WhatsApp - %s"
+msgstr "واتساب - %s"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_presence_pivot
+msgid "WhatsApp Availability"
+msgstr "توافر واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.module.category,name:flousflow_whatsapp.module_category_whatsapp_crm
+#: model:res.groups.privilege,name:flousflow_whatsapp.privilege_whatsapp_crm
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.res_config_settings_view_form_whatsapp
+msgid "WhatsApp CRM"
+msgstr "واتساب وإدارة العملاء"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_config_settings__whatsapp_connector_url
+msgid "WhatsApp Connector URL"
+msgstr "رابط موصل واتساب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_form
+msgid "WhatsApp Conversation"
+msgstr "محادثة واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields.selection,name:flousflow_whatsapp.selection__flousflow_whatsapp_message__source__whatsapp_device
+msgid "WhatsApp Device"
+msgstr "جهاز واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__customer_display_name
+msgid "WhatsApp Display Name"
+msgstr "اسم العرض في واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model,name:flousflow_whatsapp.model_flousflow_whatsapp_document_provider
+msgid "WhatsApp Document Provider"
+msgstr "موفر مستند واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_config_settings__whatsapp_attachment_global_cap_mb
+msgid "WhatsApp Global Attachment Cap (MB)"
+msgstr "الحد العام لمرفقات واتساب (ميجابايت)"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.client,name:flousflow_whatsapp.action_whatsapp_inbox
+msgid "WhatsApp Inbox"
+msgstr "صندوق وارد واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__whatsapp_message_ids
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_conversation_form
+msgid "WhatsApp Messages"
+msgstr "رسائل واتساب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_number_form
+msgid "WhatsApp Number"
+msgstr "رقم واتساب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_presence_graph
+msgid "WhatsApp Online Time"
+msgstr "وقت الاتصال بواتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/qr/auto_refresh_qr.xml:0
+msgid "WhatsApp QR code"
+msgstr "رمز QR لواتساب"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.view_whatsapp_team_form
+msgid "WhatsApp Team"
+msgstr "فريق واتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/audit_event.py:0
+msgid "WhatsApp audit events are immutable."
+msgstr "أحداث تدقيق واتساب غير قابلة للتعديل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/audit_event.py:0
+msgid "WhatsApp audit events cannot be deleted."
+msgstr "لا يمكن حذف أحداث تدقيق واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "WhatsApp conversation"
+msgstr "محادثة واتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "WhatsApp conversation summary"
+msgstr "ملخص محادثة واتساب"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/qr/auto_refresh_qr.xml:0
+msgid "WhatsApp is connected."
+msgstr "واتساب متصل."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/message.py:0
+msgid "WhatsApp message history cannot be deleted."
+msgstr "لا يمكن حذف سجل رسائل واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/connector_event.py:0
+msgid "WhatsApp status stories are not customer messages."
+msgstr "حالات واتساب ليست رسائل عملاء."
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.server,name:flousflow_whatsapp.cron_whatsapp_fail_stale_outbound_ir_actions_server
+msgid "WhatsApp: Fail Stale Outbound Messages"
+msgstr "واتساب: فشل الرسائل الصادرة العالقة"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.server,name:flousflow_whatsapp.cron_whatsapp_presence_reconcile_ir_actions_server
+msgid "WhatsApp: Reconcile Presence and Assignments"
+msgstr "واتساب: مطابقة التواجد والتعيينات"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.server,name:flousflow_whatsapp.cron_whatsapp_nonce_gc_ir_actions_server
+msgid "WhatsApp: Remove Expired Connector Nonces"
+msgstr "واتساب: حذف رموز طلب الموصل منتهية الصلاحية"
+
+#. module: flousflow_whatsapp
+#: model:ir.actions.server,name:flousflow_whatsapp.cron_whatsapp_update_sla_ir_actions_server
+msgid "WhatsApp: Update SLA Status"
+msgstr "واتساب: تحديث حالة مستوى الخدمة"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_crm_lead__whatsapp_conversation_count
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_hr_employee__whatsapp_conversation_count
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_partner__whatsapp_conversation_count
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_users__whatsapp_conversation_count
+msgid "Whatsapp Conversation Count"
+msgstr "عدد محادثات واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_partner__whatsapp_phone_normalized
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_res_users__whatsapp_phone_normalized
+msgid "Whatsapp Phone Normalized"
+msgstr "هاتف واتساب الموحّد"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_hr_employee__whatsapp_presence_interval_count
+msgid "Whatsapp Presence Interval Count"
+msgstr "عدد فترات تواجد واتساب"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_partner_statement_line__wizard_id
+msgid "Wizard"
+msgstr "معالج"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_team__work_calendar_id
+msgid "Working Hours"
+msgstr "ساعات العمل"
+
+#. module: flousflow_whatsapp
+#: model:ir.model.fields,field_description:flousflow_whatsapp.field_flousflow_whatsapp_conversation__lock_ids
+msgid "Write Locks"
+msgstr "أقفال الكتابة"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "Write a reply..."
+msgstr "اكتب ردًا..."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation.py:0
+#: code:addons/flousflow_whatsapp/models/message.py:0
+#: code:addons/flousflow_whatsapp/wizards/sale_order_send_wizard.py:0
+msgid "You are not allowed to use this WhatsApp number."
+msgstr "غير مسموح لك باستخدام رقم واتساب هذا."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/lead_wizard.py:0
+msgid "You cannot create a lead in this company."
+msgstr "لا يمكنك إنشاء عميل محتمل في هذه الشركة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "You do not have access to a connected WhatsApp number for this company."
+msgstr "ليس لديك صلاحية الوصول إلى رقم واتساب متصل لهذه الشركة."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/conversation_lock.py:0
+msgid "You no longer own the conversation write lock."
+msgstr "لم تعد تملك قفل الكتابة على المحادثة."
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "by Flous Flow WhatsApp."
+msgstr "بواسطة Flous Flow واتساب."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "email address"
+msgstr "غنوان البريد الإلكتروني"
+
+#. module: flousflow_whatsapp
+#. odoo-javascript
+#: code:addons/flousflow_whatsapp/static/src/inbox/inbox.xml:0
+msgid "is handling this conversation. You have read-only access."
+msgstr "يتولى هذه المحادثة. لديك صلاحية القراءة فقط."
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/sale_order.py:0
+msgid "phone"
+msgstr "الهاتف"
+
+#. module: flousflow_whatsapp
+#. odoo-python
+#: code:addons/flousflow_whatsapp/models/res_partner.py:0
+msgid "phone number"
+msgstr "رقم الهاتف"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "to"
+msgstr "إلى"
+
+#. module: flousflow_whatsapp
+#: model_terms:ir.ui.view,arch_db:flousflow_whatsapp.report_flousflow_partner_statement
+msgid "— closing"
+msgstr "— الختامي"

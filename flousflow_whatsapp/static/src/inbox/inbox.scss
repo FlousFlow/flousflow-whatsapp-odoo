@@ -1,0 +1,127 @@
+.o_ff_wa_inbox {
+    min-height: 0;
+    color: $o-main-text-color;
+    background: $o-view-background-color;
+
+    .o_ff_wa_sidebar {
+        width: 360px;
+        min-width: 300px;
+        background: $o-view-background-color;
+    }
+    .o_ff_wa_number_switcher {
+        .btn {
+            font-size: .75rem;
+            line-height: 1.25;
+            white-space: nowrap;
+        }
+    }
+    .o_ff_wa_thread,
+    .o_ff_wa_thread > header,
+    .o_ff_wa_composer {
+        color: $o-main-text-color;
+        background: $o-view-background-color !important;
+    }
+    .o_ff_wa_conversation {
+        background: $o-view-background-color;
+        color: $o-main-text-color;
+        transition: background-color .15s ease;
+    }
+    .o_ff_wa_conversation:hover { background: $o-gray-100; }
+    .o_ff_wa_conversation.active {
+        background: rgba($o-action, .12);
+        box-shadow: inset 3px 0 $o-action;
+    }
+    .o_ff_wa_claim_banner { background: $o-gray-100; }
+    .o_ff_wa_messages { background: $o-webclient-background-color; }
+    .o_ff_wa_bubble {
+        width: fit-content;
+        max-width: 70%;
+        color: $o-main-text-color;
+        background: $o-view-background-color;
+        border: 1px solid $o-gray-300;
+        border-radius: $border-radius-lg;
+        box-shadow: $box-shadow-sm;
+    }
+    .o_ff_wa_bubble.outbound {
+        background: rgba($o-action, .12);
+        border-color: rgba($o-action, .2);
+    }
+    .o_ff_wa_composer textarea { resize: none; }
+    .o_ff_wa_audio { width: 65vw; max-width: 320px; height: 40px; }
+    .o_ff_wa_audio_preview { max-width: 420px; height: 40px; }
+    .o_ff_wa_image { display: block; max-width: 320px; max-height: 320px; border-radius: $border-radius; object-fit: contain; }
+    .o_ff_wa_document { min-width: 240px; border: 1px solid rgba($o-main-text-color, .15); border-radius: $border-radius; }
+    .o_ff_wa_receipt.read { color: #53bdeb; opacity: 1; }
+    .o_ff_wa_second_check { margin-left: -4px; }
+    .o_ff_wa_recording_dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $o-danger;
+        animation: o_ff_wa_recording_pulse 1s ease-in-out infinite;
+    }
+    .o_ff_wa_level_meter {
+        width: 4px;
+        height: 16px;
+        background: rgba($o-main-text-color, .15);
+        border-radius: 2px;
+        overflow: hidden;
+        position: relative;
+    }
+    .o_ff_wa_level_bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: $o-danger;
+        border-radius: 2px;
+        transition: height 90ms linear, background 150ms ease;
+        &.active {
+            background: $o-success;
+        }
+    }
+    .o_ff_wa_unread_badge {
+        min-width: 20px;
+        line-height: 1;
+        font-size: .7rem;
+        padding: .3rem .45rem;
+    }
+    .o_ff_wa_conversation_phone {
+        font-size: .78rem;
+        color: $o-gray-600;
+        direction: ltr;
+        text-align: left;
+    }
+    .o_ff_wa_typing_hint {
+        font-size: .8rem;
+    }
+    .o_ff_wa_emoji_picker {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2px;
+        width: 220px;
+        max-height: 220px;
+        overflow-y: auto;
+        z-index: 30;
+        margin-bottom: 4px;
+    }
+    .o_ff_wa_emoji {
+        font-size: 1.35rem;
+        line-height: 1;
+        padding: 2px;
+        border-radius: $border-radius-sm;
+        &:hover {
+            background: $o-gray-200;
+        }
+    }
+}
+
+@keyframes o_ff_wa_recording_pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .35; transform: scale(.8); }
+}
+
+@media (max-width: 767px) {
+    .o_ff_wa_inbox .o_ff_wa_sidebar { width: 42%; min-width: 150px; }
+    .o_ff_wa_inbox .o_ff_wa_bubble { max-width: 90%; }
+}

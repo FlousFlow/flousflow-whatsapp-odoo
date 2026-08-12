@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_whatsapp" model="ir.ui.view">
+        <field name="name">sale.order.form.whatsapp</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@id='quotation_send_primary']" position="after">
+                <button name="action_send_quotation_whatsapp"
+                        type="object"
+                        string="Send via WhatsApp"
+                        icon="fa-whatsapp"
+                        groups="flousflow_whatsapp.group_whatsapp_agent"
+                        invisible="state not in ('draft', 'sent')"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

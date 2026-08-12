@@ -1,0 +1,183 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <a href="images/cover_screenshot.png" target="_blank">
+                <img class="oe_picture oe_screenshot" src="images/cover_screenshot.png" style="width:100%;"/>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Flous Flow WhatsApp</h2>
+        <h3 class="oe_slogan">Presence-aware shared WhatsApp inbox for your team</h3>
+        <div class="oe_span12">
+            <p class="text-center" style="font-size:15px;">
+                A self-contained <b>Odoo 19 Community</b> suite that turns WhatsApp into a
+                professional support &amp; sales channel. Manage shared numbers, route
+                conversations to the right agent, respect SLAs, hand off to CRM and send
+                quotations &amp; statements — all from one module.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Self-hosted Connector Setup</h2>
+        <div class="oe_span12">
+            <p>
+                The companion connector runs on infrastructure controlled by the customer.
+                On a Linux server with Docker Engine and Docker Compose v2, run:
+            </p>
+            <pre style="background:#1f2937;color:#f9fafb;padding:16px;border-radius:6px;white-space:pre-wrap;">git clone --branch v1.4.0 --depth 1 https://github.com/FlousFlow/flousflow-whatsapp-connector.git
+cd flousflow-whatsapp-connector
+sudo ./deploy/install.sh --odoo-url https://odoo.example.com</pre>
+            <p>
+                The installer generates secrets, builds the pinned connector, creates a
+                hardened systemd service and verifies its health. The Odoo addon never
+                downloads or launches external code. New numbers register automatically;
+                adding a number does not require editing Docker or restarting the connector.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Screenshots</h2>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Shared WhatsApp Inbox</h3>
+        <div class="oe_span12">
+            <a href="images/inbox.png" target="_blank">
+                <img class="oe_picture oe_screenshot" src="images/inbox.png" style="width:100%;"/>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h3 class="oe_slogan">Numbers &amp; Pairing</h3>
+        <div class="oe_span6">
+            <a href="images/numbers.png" target="_blank">
+                <img class="oe_picture oe_screenshot" src="images/numbers.png" style="width:100%;"/>
+            </a>
+        </div>
+        <div class="oe_span6">
+            <a href="images/number_form.png" target="_blank">
+                <img class="oe_picture oe_screenshot" src="images/number_form.png" style="width:100%;"/>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Key Features</h2>
+        <div class="oe_span4">
+            <div class="text-center">
+                <i class="fa fa-inbox fa-3x" style="color:#875A7B;"></i>
+            </div>
+            <h4 style="text-align:center;">Shared Team Inbox</h4>
+            <p>Real-time OWL inbox with live bus updates and a fallback poller. Every
+               conversation is visible to the right team, with clear assignment states.</p>
+        </div>
+        <div class="oe_span4">
+            <div class="text-center">
+                <i class="fa fa-route fa-3x" style="color:#875A7B;"></i>
+            </div>
+            <h4 style="text-align:center;">Smart Routing &amp; SLA</h4>
+            <p>Least-open + round-robin assignment, online/away/busy awareness and
+               first-response / reply SLAs with breach tracking.</p>
+        </div>
+        <div class="oe_span4">
+            <div class="text-center">
+                <i class="fa fa-lock fa-3x" style="color:#875A7B;"></i>
+            </div>
+            <h4 style="text-align:center;">Safe by Design</h4>
+            <p>Lease-based conversation locks, supervisor takeover, HMAC-signed
+               connector webhooks, nonce replay protection and media validated by
+               real file signatures.</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <h3 class="oe_slogan">Connect &amp; Pair</h3>
+            <ul>
+                <li>Create a WhatsApp number and pair it with a QR code.</li>
+                <li>Live status: draft → QR → connecting → connected.</li>
+                <li>Multi-company safe numbers, teams and direct allow/deny rules.</li>
+                <li>Agent / Supervisor / Administrator / Executive Odoo 19 privileges.</li>
+            </ul>
+        </div>
+        <div class="oe_span6">
+            <h3 class="oe_slogan">Run Your Business</h3>
+            <ul>
+                <li><b>CRM handoff</b> — create leads from conversations with safe partner resolution.</li>
+                <li><b>Sales bridge</b> — send quotation PDFs from the inbox or the sale order.</li>
+                <li><b>Accounting bridge</b> — send customer/vendor statements as PDFs.</li>
+                <li><b>HR awareness</b> — operational availability of agents.</li>
+                <li><b>Voice notes</b> — record, preview and send native WhatsApp PTT audio.</li>
+                <li><b>Audio files</b> — upload supported audio without converting it to a voice note.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Technical Highlights</h2>
+        <ul>
+            <li>Depends only on Odoo core modules: <code>base, mail, bus, contacts, crm, hr, sale, account, web</code>.</li>
+            <li>Connector API: HMAC-SHA256 signed webhooks with a 5-minute timestamp
+                window and one-time nonces stored in the database.</li>
+            <li>Outbox claiming, delivery/read receipts, stale-message timeout with retry.</li>
+            <li>Serialized outbound sending, configurable pacing and a customer-service window policy.</li>
+            <li>Connector heartbeat/version monitoring and supervisor manual retry.</li>
+            <li>Media policy inspects WebM/MP4 magic bytes — disguised video is blocked.</li>
+            <li>Idempotent inbound/outbound handling (duplicate-safe) and echo de-duplication.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Requirements</h2>
+        <div class="oe_span12">
+            <p class="text-center">
+                <b>Odoo 19</b> (Community or Enterprise).
+                This module requires a companion QR-based WhatsApp connector service
+                (not included) that calls the signed HTTP API. To protect your number
+                from service interruptions, deploy tested connector releases,
+                persist one session per number and configure outbound pacing.
+            </p>
+            <p class="text-center" style="color:#666;">
+                The companion connector uses unofficial QR-paired WhatsApp Web
+                technology. It is not the Meta WhatsApp Cloud API and cannot
+                guarantee against account restrictions. Do not use it for
+                unsolicited bulk messaging; customers remain responsible for
+                consent and compliance with applicable terms and law.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Support</h2>
+        <div class="oe_span12">
+            <p class="text-center">
+                <a href="https://flousflow.com" target="_blank">Flous Flow</a>
+            </p>
+        </div>
+    </div>
+</section>

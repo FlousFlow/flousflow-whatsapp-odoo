@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_whatsapp_conversation" model="ir.sequence">
+            <field name="name">WhatsApp Conversation</field>
+            <field name="code">flousflow.whatsapp.conversation</field>
+            <field name="prefix">WA/%(year)s/</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_flousflow_partner_statement_wizard_form" model="ir.ui.view">
+        <field name="name">flousflow.partner.statement.wizard.form</field>
+        <field name="model">flousflow.partner.statement.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Partner Statement">
+                <header>
+                    <button name="action_preview" type="object" string="Preview" class="oe_highlight"/>
+                    <button name="%(flousflow_whatsapp.action_report_flousflow_partner_statement)d"
+                            type="action" string="Print (PDF)" class="oe_highlight"
+                            groups="account.group_account_manager"/>
+                    <button string="Close" special="cancel"/>
+                </header>
+                <group>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="account_type"/>
+                        <field name="target_move"/>
+                        <field name="include_reconciled"/>
+                    </group>
+                </group>
+                <group string="Summary">
+                    <group>
+                        <field name="opening_balance" readonly="1"/>
+                        <field name="closing_balance" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="total_debit" readonly="1"/>
+                        <field name="total_credit" readonly="1"/>
+                    </group>
+                    <group invisible="account_type != 'both'">
+                        <field name="opening_receivable" readonly="1"/>
+                        <field name="closing_receivable" readonly="1"/>
+                    </group>
+                    <group invisible="account_type != 'both'">
+                        <field name="opening_payable" readonly="1"/>
+                        <field name="closing_payable" readonly="1"/>
+                    </group>
+                </group>
+                <field name="line_ids" readonly="1">
+                    <list>
+                        <field name="date"/>
+                        <field name="move_name"/>
+                        <field name="name"/>
+                        <field name="debit" sum="Total Debit"/>
+                        <field name="credit" sum="Total Credit"/>
+                        <field name="balance"/>
+                    </list>
+                </field>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_flousflow_partner_statement" model="ir.actions.act_window">
+        <field name="name">Partner Statement</field>
+        <field name="res_model">flousflow.partner.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_flousflow_partner_statement_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

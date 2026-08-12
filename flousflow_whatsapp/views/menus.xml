@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_whatsapp_inbox_entry" model="ir.actions.act_url">
+        <field name="name">WhatsApp Inbox</field>
+        <field name="url">/flousflow/whatsapp/inbox</field>
+        <field name="target">self</field>
+    </record>
+    <menuitem id="menu_whatsapp_root" name="WhatsApp" sequence="35" web_icon="flousflow_whatsapp,static/description/icon.png" groups="flousflow_whatsapp.group_whatsapp_agent"/>
+    <menuitem id="menu_whatsapp_conversations" name="Inbox" parent="menu_whatsapp_root" action="action_whatsapp_inbox_entry" sequence="10"/>
+    <menuitem id="menu_whatsapp_all_conversations" name="All Conversations" parent="menu_whatsapp_root" action="action_whatsapp_conversations" sequence="20" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
+    <menuitem id="menu_whatsapp_reporting" name="Reporting" parent="menu_whatsapp_root" sequence="70" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
+    <menuitem id="menu_whatsapp_presence" name="Availability" parent="menu_whatsapp_reporting" action="action_whatsapp_presence" sequence="10"/>
+    <menuitem id="menu_whatsapp_statement" name="Partner Statement" parent="menu_whatsapp_reporting" action="action_flousflow_partner_statement" sequence="20"/>
+    <menuitem id="menu_whatsapp_failed_messages" name="Failed Messages" parent="menu_whatsapp_reporting" action="action_whatsapp_failed_messages" sequence="30"/>
+    <menuitem id="menu_whatsapp_configuration" name="Configuration" parent="menu_whatsapp_root" sequence="90" groups="flousflow_whatsapp.group_whatsapp_admin"/>
+    <menuitem id="menu_whatsapp_numbers" name="Numbers" parent="menu_whatsapp_configuration" action="action_whatsapp_numbers" sequence="10"/>
+    <menuitem id="menu_whatsapp_teams" name="Teams" parent="menu_whatsapp_configuration" action="action_whatsapp_teams" sequence="20"/>
+</odoo>

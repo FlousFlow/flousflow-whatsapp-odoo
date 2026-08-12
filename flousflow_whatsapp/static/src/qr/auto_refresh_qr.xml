@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="flousflow_whatsapp.WhatsappAutoRefreshQr" owl="1">
+        <div class="o_ff_whatsapp_qr d-flex flex-column align-items-start gap-2">
+            <img t-if="state.hasQr" t-att-src="qrUrl" alt="WhatsApp QR code" width="360" height="360" class="img-fluid border rounded bg-white p-2"/>
+            <div t-if="state.hasQr" class="text-muted small">
+                <i class="fa fa-refresh me-1"/>QR refreshes automatically. Scan the currently displayed code.
+            </div>
+            <div t-elif="state.connectorState === 'connected'" class="alert alert-success mb-0">
+                <i class="fa fa-check-circle me-1"/>WhatsApp is connected.
+            </div>
+            <div t-else="" class="alert alert-info mb-0">
+                <i class="fa fa-spinner fa-spin me-1"/>Waiting for the connector to generate a QR code.
+            </div>
+        </div>
+    </t>
+</templates>

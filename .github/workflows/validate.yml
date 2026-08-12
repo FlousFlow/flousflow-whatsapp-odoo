@@ -1,0 +1,23 @@
+name: Validate Odoo addon
+
+on:
+  push:
+    branches: ["19.0"]
+  pull_request:
+    branches: ["19.0"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python
+        run: python -m compileall -q flousflow_whatsapp
+      - name: Validate Odoo Apps release
+        run: python flousflow_whatsapp/scripts/validate_release.py

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_flousflow_partner_statement" model="ir.actions.report">
+        <field name="name">Partner Statement</field>
+        <field name="model">flousflow.partner.statement.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">flousflow_whatsapp.report_flousflow_partner_statement</field>
+        <field name="report_file">flousflow_whatsapp.report_flousflow_partner_statement</field>
+        <field name="binding_model_id" ref="model_flousflow_partner_statement_wizard"/>
+        <field name="print_report_name">'Statement-%s-%s' % (object.partner_id.display_name or 'Partner', object.date_to)</field>
+    </record>
+
+    <template id="report_flousflow_partner_statement">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row mt32 mb32">
+                            <div class="col-6">
+                                <h2>
+                                    <t t-if="o.account_type == 'receivable'">Customer Statement</t>
+                                    <t t-elif="o.account_type == 'payable'">Vendor Statement</t>
+                                    <t t-else="">Partner Statement</t>
+                                </h2>
+                                <div t-if="o.account_type == 'both'" class="mt16">
+                                    <div><strong>Receivable</strong>: opening <span t-esc="o.opening_receivable"/> — closing <span t-esc="o.closing_receivable"/></div>
+                                    <div><strong>Payable</strong>: opening <span t-esc="o.opening_payable"/> — closing <span t-esc="o.closing_payable"/></div>
+                                </div>
+                                <div><strong t-esc="o.partner_id.display_name or o.partner_id.name"/></div>
+                                <div t-if="o.partner_id.vat">VAT: <span t-esc="o.partner_id.vat"/></div>
+                                <div t-if="o.partner_id.street" t-esc="o.partner_id.street"/>
+                                <div t-if="o.partner_id.city" t-esc="o.partner_id.city"/>
+                            </div>
+                            <div class="col-6 text-end">
+                                <div><strong>Period</strong>: <span t-esc="o.date_from"/> to <span t-esc="o.date_to"/></div>
+                                <div><strong>Currency</strong>: <span t-esc="o.currency_id.name"/></div>
+                                <div t-if="o.target_move == 'posted'"><strong>Entries</strong>: Posted</div>
+                                <div t-else=""><strong>Entries</strong>: All</div>
+                            </div>
+                        </div>
+
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Reference</th>
+                                    <th>Description</th>
+                                    <th class="text-end">Debit</th>
+                                    <th class="text-end">Credit</th>
+                                    <th class="text-end">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3"><strong>Opening Balance</strong> <span class="text-muted">(before <span t-esc="o.date_from"/>)</span></td>
+                                    <td colspan="2"/>
+                                    <td class="text-end" t-esc="o.opening_balance"/>
+                                </tr>
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    <tr>
+                                        <td t-esc="line.date"/>
+                                        <td t-esc="line.move_name"/>
+                                        <td t-esc="line.name"/>
+                                        <td class="text-end" t-esc="line.debit"/>
+                                        <td class="text-end" t-esc="line.credit"/>
+                                        <td class="text-end" t-esc="line.balance"/>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td colspan="3"><strong>Totals</strong></td>
+                                    <td class="text-end" t-esc="o.total_debit"/>
+                                    <td class="text-end" t-esc="o.total_credit"/>
+                                    <td/>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><strong>Closing Balance</strong></td>
+                                    <td colspan="2"/>
+                                    <td class="text-end" t-esc="o.closing_balance"/>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="mt32 text-muted small">
+                            Generated on <span t-esc="time.strftime('%d/%m/%Y')"/> by Flous Flow WhatsApp.
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
