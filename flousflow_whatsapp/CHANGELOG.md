@@ -1,5 +1,10 @@
 # Changelog
 
+## 19.0.1.6.3 - 2026-08-13
+
+- Improve Odoo Apps installation-command contrast across store themes.
+- Replace a non-ASCII dash with an HTML entity to avoid mojibake.
+
 ## 19.0.1.6.2 - 2026-08-12
 
 - Dynamically provision every new self-hosted connector session from Odoo.
