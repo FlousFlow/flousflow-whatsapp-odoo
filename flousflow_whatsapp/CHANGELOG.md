@@ -1,5 +1,10 @@
 # Changelog
 
+## 19.0.1.6.5 - 2026-08-13
+
+- Open Inbox through its native Odoo client action so WhatsApp becomes the
+  current app and its Reporting and Configuration menus remain visible.
+
 ## 19.0.1.6.4 - 2026-08-13
 
 - Add a WhatsApp Configuration > Settings menu that opens this app directly.

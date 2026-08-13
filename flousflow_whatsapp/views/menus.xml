@@ -6,7 +6,8 @@
         <field name="target">self</field>
     </record>
     <menuitem id="menu_whatsapp_root" name="WhatsApp" sequence="35" web_icon="flousflow_whatsapp,static/description/icon.png" groups="flousflow_whatsapp.group_whatsapp_agent"/>
-    <menuitem id="menu_whatsapp_conversations" name="Inbox" parent="menu_whatsapp_root" action="action_whatsapp_inbox_entry" sequence="10"/>
+    <menuitem id="menu_whatsapp_conversations" name="Inbox" parent="menu_whatsapp_root"
+              action="action_whatsapp_inbox" sequence="10"/>
     <menuitem id="menu_whatsapp_all_conversations" name="All Conversations" parent="menu_whatsapp_root" action="action_whatsapp_conversations" sequence="20" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
     <menuitem id="menu_whatsapp_reporting" name="Reporting" parent="menu_whatsapp_root" sequence="70" groups="flousflow_whatsapp.group_whatsapp_supervisor"/>
     <menuitem id="menu_whatsapp_presence" name="Availability" parent="menu_whatsapp_reporting" action="action_whatsapp_presence" sequence="10"/>

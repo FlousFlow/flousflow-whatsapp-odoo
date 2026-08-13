@@ -18,3 +18,9 @@ class TestWhatsappSettings(TransactionCase):
         view = self.env.ref("flousflow_whatsapp.res_config_settings_view_form_whatsapp")
         self.assertIn('name="flousflow_whatsapp"', view.arch)
         self.assertIn('id="whatsapp_connector_url_setting"', view.arch)
+
+    def test_inbox_menu_uses_native_client_action(self):
+        menu = self.env.ref("flousflow_whatsapp.menu_whatsapp_conversations")
+        action = self.env.ref("flousflow_whatsapp.action_whatsapp_inbox")
+        self.assertEqual(menu.action, action)
+        self.assertEqual(action.tag, "flousflow_whatsapp.inbox")
