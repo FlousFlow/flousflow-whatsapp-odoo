@@ -1,6 +1,6 @@
 {
     "name": "WhatsApp Shared Inbox",
-    "version": "19.0.1.6.3",
+    "version": "19.0.1.6.4",
     "category": "Sales/CRM",
     "summary": "Presence-aware shared WhatsApp inbox with CRM, Sales and Accounting bridges",
     "description": """

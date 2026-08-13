@@ -15,3 +15,4 @@ from . import test_lead_wizard
 from . import test_sale_document
 from . import test_statement_document
 from . import test_statement
+from . import test_settings

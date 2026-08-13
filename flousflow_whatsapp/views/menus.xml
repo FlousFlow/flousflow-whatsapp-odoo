@@ -15,4 +15,7 @@
     <menuitem id="menu_whatsapp_configuration" name="Configuration" parent="menu_whatsapp_root" sequence="90" groups="flousflow_whatsapp.group_whatsapp_admin"/>
     <menuitem id="menu_whatsapp_numbers" name="Numbers" parent="menu_whatsapp_configuration" action="action_whatsapp_numbers" sequence="10"/>
     <menuitem id="menu_whatsapp_teams" name="Teams" parent="menu_whatsapp_configuration" action="action_whatsapp_teams" sequence="20"/>
+    <menuitem id="menu_whatsapp_settings" name="Settings" parent="menu_whatsapp_configuration"
+              action="action_whatsapp_settings" sequence="90"
+              groups="base.group_system,flousflow_whatsapp.group_whatsapp_admin"/>
 </odoo>

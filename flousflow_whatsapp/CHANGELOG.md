@@ -1,5 +1,10 @@
 # Changelog
 
+## 19.0.1.6.4 - 2026-08-13
+
+- Add a WhatsApp Configuration > Settings menu that opens this app directly.
+- Give the settings app stable Odoo 19 identifiers for reliable rendering.
+
 ## 19.0.1.6.3 - 2026-08-13
 
 - Improve Odoo Apps installation-command contrast across store themes.

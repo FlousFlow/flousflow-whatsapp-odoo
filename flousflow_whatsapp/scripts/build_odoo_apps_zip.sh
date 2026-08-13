@@ -4,7 +4,7 @@ set -euo pipefail
 module_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 workspace_dir="$(dirname "$module_dir")"
 release_dir="$workspace_dir/release"
-archive="$release_dir/flousflow_whatsapp-19.0.1.6.3.zip"
+archive="$release_dir/flousflow_whatsapp-19.0.1.6.4.zip"
 
 python3 "$module_dir/scripts/validate_release.py"
 mkdir -p "$release_dir"

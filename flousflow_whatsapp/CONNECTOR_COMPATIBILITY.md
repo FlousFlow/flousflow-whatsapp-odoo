@@ -2,6 +2,7 @@
 
 | Odoo addon | Connector | Odoo | Node.js |
 |---|---|---|---|
+| 19.0.1.6.4 | 1.4.x | 19.0 Community or Enterprise | 22 LTS |
 | 19.0.1.6.3 | 1.4.x | 19.0 Community or Enterprise | 22 LTS |
 | 19.0.1.6.2 | 1.4.x | 19.0 Community or Enterprise | 22 LTS |
 
