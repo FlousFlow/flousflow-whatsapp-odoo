@@ -39,10 +39,10 @@ jobs:
         run: |
           docker run --rm --network whatsapp-test \
             -e PYTHONDONTWRITEBYTECODE=1 \
+            -e HOST=whatsapp-test-db -e PORT=5432 \
+            -e USER=odoo -e PASSWORD=odoo \
             -v "$PWD/flousflow_whatsapp:/mnt/extra-addons/flousflow_whatsapp:ro" \
             odoo:20.0 odoo \
-            --db_host=whatsapp-test-db --db_port=5432 \
-            --db_user=odoo --db_password=odoo \
             --database=flousflow_whatsapp_test \
             --addons-path=/mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons \
             --init=flousflow_whatsapp --test-enable \
