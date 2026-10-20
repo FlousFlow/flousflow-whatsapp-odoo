@@ -3,7 +3,9 @@
 ## 20.0.1.0.0 - 2026-10-20
 
 - Port the addon to Odoo 20's `ir.access` security records.
+- Preserve Odoo 19 group and global domain semantics in the new access model.
 - Use typed configuration parameter APIs and the Odoo 20 binary attachment API.
+- Keep Node-only helper tests outside Odoo's browser-test asset bundle.
 - Update metadata, release validation, and CI for the `20.0` branch.
 
 ## 19.0.1.6.5 - 2026-08-13

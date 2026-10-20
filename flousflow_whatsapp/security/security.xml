@@ -1,279 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <record id="module_category_whatsapp_crm" model="ir.module.category">
         <field name="name">WhatsApp CRM</field>
         <field name="sequence">45</field>
     </record>
-
     <record id="privilege_whatsapp_crm" model="res.groups.privilege">
         <field name="name">WhatsApp CRM</field>
         <field name="sequence">45</field>
-        <field name="category_id" ref="module_category_whatsapp_crm"/>
+        <field name="category_id" ref="module_category_whatsapp_crm" />
     </record>
-
     <record id="group_whatsapp_agent" model="res.groups">
         <field name="name">Agent</field>
         <field name="sequence">10</field>
-        <field name="privilege_id" ref="privilege_whatsapp_crm"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('sales_team.group_sale_salesman'))]"/>
+        <field name="privilege_id" ref="privilege_whatsapp_crm" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('sales_team.group_sale_salesman'))]" />
     </record>
-
     <record id="group_whatsapp_supervisor" model="res.groups">
         <field name="name">Supervisor</field>
         <field name="sequence">20</field>
-        <field name="privilege_id" ref="privilege_whatsapp_crm"/>
-        <field name="implied_ids" eval="[(4, ref('group_whatsapp_agent'))]"/>
+        <field name="privilege_id" ref="privilege_whatsapp_crm" />
+        <field name="implied_ids" eval="[(4, ref('group_whatsapp_agent'))]" />
     </record>
-
     <record id="group_whatsapp_admin" model="res.groups">
         <field name="name">Administrator</field>
         <field name="sequence">30</field>
-        <field name="privilege_id" ref="privilege_whatsapp_crm"/>
-        <field name="implied_ids" eval="[(4, ref('group_whatsapp_supervisor'))]"/>
+        <field name="privilege_id" ref="privilege_whatsapp_crm" />
+        <field name="implied_ids" eval="[(4, ref('group_whatsapp_supervisor'))]" />
     </record>
-
     <record id="group_whatsapp_executive" model="res.groups">
         <field name="name">Executive Viewer</field>
         <field name="sequence">40</field>
-        <field name="privilege_id" ref="privilege_whatsapp_crm"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="privilege_id" ref="privilege_whatsapp_crm" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
     </record>
-
-    <data noupdate="1">
-        <record id="rule_whatsapp_team_company" model="ir.rule">
-            <field name="name">WhatsApp Team: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_team"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_team_agent" model="ir.rule">
-            <field name="name">WhatsApp Team: assigned agents</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_team"/>
-            <field name="domain_force">['|', ('member_ids', 'in', [user.id]), ('supervisor_ids', 'in', [user.id])]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_team_admin" model="ir.rule">
-            <field name="name">WhatsApp Team: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_team"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_number_company" model="ir.rule">
-            <field name="name">WhatsApp Number: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_number"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_number_agent" model="ir.rule">
-            <field name="name">WhatsApp Number: allowed agents</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_number"/>
-            <field name="domain_force">[
-                ('denied_user_ids', 'not in', [user.id]),
-                '|', ('allowed_user_ids', 'in', [user.id]),
-                '|', ('primary_team_id.member_ids', 'in', [user.id]),
-                '|', ('primary_team_id.supervisor_ids', 'in', [user.id]),
-                '|', ('allowed_team_ids.member_ids', 'in', [user.id]),
-                     ('allowed_team_ids.supervisor_ids', 'in', [user.id])
-            ]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_number_admin" model="ir.rule">
-            <field name="name">WhatsApp Number: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_number"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_number_member_company" model="ir.rule">
-            <field name="name">WhatsApp Number User Rule: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_number_member"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_conversation_company" model="ir.rule">
-            <field name="name">WhatsApp Conversation: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_conversation_agent_read" model="ir.rule">
-            <field name="name">WhatsApp Conversation: authorized number read</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
-            <field name="domain_force">[
-                ('number_id.denied_user_ids', 'not in', [user.id]),
-                '|', ('number_id.allowed_user_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.member_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]),
-                '|', ('number_id.allowed_team_ids.member_ids', 'in', [user.id]),
-                     ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])
-            ]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
-
-        <record id="rule_whatsapp_conversation_agent_write" model="ir.rule">
-            <field name="name">WhatsApp Conversation: assigned agent write</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
-            <field name="domain_force">[('assigned_user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-            <field name="perm_read" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
-
-        <record id="rule_whatsapp_conversation_supervisor" model="ir.rule">
-            <field name="name">WhatsApp Conversation: supervisor team access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
-            <field name="domain_force">['|', ('team_id.supervisor_ids', 'in', [user.id]), ('number_id.manager_user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_supervisor'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_conversation_admin" model="ir.rule">
-            <field name="name">WhatsApp Conversation: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_lock_company" model="ir.rule">
-            <field name="name">WhatsApp Lock: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation_lock"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_lock_agent_read" model="ir.rule">
-            <field name="name">WhatsApp Lock: authorized number read</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation_lock"/>
-            <field name="domain_force">[
-                ('number_id.denied_user_ids', 'not in', [user.id]),
-                '|', ('number_id.allowed_user_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.member_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]),
-                '|', ('number_id.allowed_team_ids.member_ids', 'in', [user.id]),
-                     ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])
-            ]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
-
-        <record id="rule_whatsapp_lock_owner" model="ir.rule">
-            <field name="name">WhatsApp Lock: owner manage</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation_lock"/>
-            <field name="domain_force">[('owner_user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-            <field name="perm_read" eval="False"/>
-            <field name="perm_unlink" eval="False"/>
-        </record>
-
-        <record id="rule_whatsapp_lock_supervisor" model="ir.rule">
-            <field name="name">WhatsApp Lock: supervisor access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation_lock"/>
-            <field name="domain_force">['|', ('conversation_id.team_id.supervisor_ids', 'in', [user.id]), ('number_id.manager_user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_supervisor'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_lock_admin" model="ir.rule">
-            <field name="name">WhatsApp Lock: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_conversation_lock"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_audit_company" model="ir.rule">
-            <field name="name">WhatsApp Audit: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_audit_event"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_presence_company" model="ir.rule">
-            <field name="name">WhatsApp Presence: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-
-        <record id="rule_whatsapp_presence_agent" model="ir.rule">
-            <field name="name">WhatsApp Presence: own intervals</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
-            <field name="domain_force">[('user_id', '=', user.id)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_presence_supervisor" model="ir.rule">
-            <field name="name">WhatsApp Presence: supervisor company access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_supervisor'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_presence_admin" model="ir.rule">
-            <field name="name">WhatsApp Presence: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-
-        <record id="rule_whatsapp_presence_executive" model="ir.rule">
-            <field name="name">WhatsApp Presence: executive read access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_presence_interval"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_executive'))]"/>
-        </record>
-        <record id="rule_whatsapp_message_company" model="ir.rule">
-            <field name="name">WhatsApp Message: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_message"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-        <record id="rule_whatsapp_message_agent" model="ir.rule">
-            <field name="name">WhatsApp Message: authorized number</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_message"/>
-            <field name="domain_force">[
-                ('number_id.denied_user_ids', 'not in', [user.id]),
-                '|', ('number_id.allowed_user_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.member_ids', 'in', [user.id]),
-                '|', ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]),
-                '|', ('number_id.allowed_team_ids.member_ids', 'in', [user.id]),
-                     ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])
-            ]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_agent'))]"/>
-        </record>
-        <record id="rule_whatsapp_message_admin" model="ir.rule">
-            <field name="name">WhatsApp Message: administrator access</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_message"/>
-            <field name="domain_force">[(1, '=', 1)]</field>
-            <field name="groups" eval="[(4, ref('group_whatsapp_admin'))]"/>
-        </record>
-        <record id="rule_whatsapp_event_company" model="ir.rule">
-            <field name="name">WhatsApp Connector Event: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_connector_event"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-        <record id="rule_whatsapp_transfer_company" model="ir.rule">
-            <field name="name">WhatsApp Transfer: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_transfer"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-        <record id="rule_whatsapp_reply_company" model="ir.rule">
-            <field name="name">WhatsApp Canned Reply: multi-company</field>
-            <field name="model_id" ref="model_flousflow_whatsapp_canned_reply"/>
-            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
-            <field name="global" eval="True"/>
-        </record>
-    </data>
 </odoo>

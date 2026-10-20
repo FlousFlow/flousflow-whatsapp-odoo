@@ -14,7 +14,7 @@ Highlights:
 - HMAC-signed connector webhooks (timestamp window + nonce replay protection)
 - Media policy validated on real file signatures (blocks disguised video)
 - Row-level conversation locks with lease/heartbeat and advisory locks
-- Multi-company safe security with Odoo 20 access controls and record rules
+- Multi-company safe security with Odoo 20 access controls and scoped domains
 - Idempotent inbound/outbound message handling
 - Send quotations and customer statements as PDFs from the inbox
 """,
@@ -63,8 +63,6 @@ Highlights:
         ],
         "web.assets_unit_tests": [
             "flousflow_whatsapp/static/tests/inbox.test.js",
-            "flousflow_whatsapp/static/tests/phone_format.test.mjs",
-            "flousflow_whatsapp/static/tests/audio.test.mjs",
         ],
     },
 }

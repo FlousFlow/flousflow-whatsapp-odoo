@@ -19,7 +19,6 @@ class ResUsers(models.Model):
                 for user in self:
                     Presence._update_presence(user, inactivity_period=0)
                 self.invalidate_recordset(["im_status"])
-                self.partner_id.invalidate_recordset(["im_status"])
             Interval = self.env["flousflow.whatsapp.presence.interval"]
             for user in self:
                 Interval.record_transition(

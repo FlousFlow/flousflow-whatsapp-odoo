@@ -5,7 +5,6 @@
         <field name="model">flousflow.partner.statement.wizard</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">flousflow_whatsapp.report_flousflow_partner_statement</field>
-        <field name="report_file">flousflow_whatsapp.report_flousflow_partner_statement</field>
         <field name="binding_model_id" ref="model_flousflow_partner_statement_wizard"/>
         <field name="print_report_name">'Statement-%s-%s' % (object.partner_id.display_name or 'Partner', object.date_to)</field>
     </record>

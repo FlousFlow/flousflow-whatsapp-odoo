@@ -122,8 +122,8 @@ this Odoo module. To avoid number bans and service interruptions the connector
   timestamp window, and one-time nonces stored in the database.
 - Media is validated by magic bytes (WebM/MP4 container inspection), not just
   the declared MIME type. Video is blocked.
-- Record rules enforce multi-company isolation and per-number team access;
-  audit events are immutable.
+- Odoo 20 access domains enforce multi-company isolation and per-number team
+  access; audit events are immutable.
 - Odoo 20 `ir.access` privileges: `Agent`, `Supervisor`, `Administrator`, `Executive`.
 
 ## Important WhatsApp Notice

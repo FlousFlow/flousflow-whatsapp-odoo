@@ -46,10 +46,16 @@ access_ids = [row["id"] for row in access_rows]
 if len(access_ids) != len(set(access_ids)):
     fail("security/ir.access.csv contains duplicate record IDs")
 for row in access_rows:
-    if not row["model_id"] or not row["group_id/id"]:
-        fail(f"access row {row['id']} is missing a model or group")
+    if not row["model_id"]:
+        fail(f"access row {row['id']} is missing a model")
+    if not row["group_id/id"] and not row["domain"]:
+        fail(f"global access row {row['id']} must define a restricting domain")
     if not row["operation"] or set(row["operation"]) - set("crud"):
         fail(f"access row {row['id']} has an invalid operation set")
+
+security_xml = ROOT / "security/security.xml"
+if security_xml.is_file() and 'model="ir.rule"' in security_xml.read_text(encoding="utf-8"):
+    fail("Odoo 20 security must not define legacy ir.rule records")
 
 for path in ROOT.rglob("*"):
     if any(part in FORBIDDEN_PARTS for part in path.parts):

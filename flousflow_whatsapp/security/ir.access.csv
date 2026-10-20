@@ -1,56 +1,69 @@
 id,name,model_id,group_id/id,operation,domain
-access_whatsapp_team_agent,WhatsApp Team Agent,flousflow.whatsapp.team,group_whatsapp_agent,r,
-access_whatsapp_team_supervisor,WhatsApp Team Supervisor,flousflow.whatsapp.team,group_whatsapp_supervisor,r,
-access_whatsapp_team_admin,WhatsApp Team Administrator,flousflow.whatsapp.team,group_whatsapp_admin,crud,
-access_whatsapp_team_executive,WhatsApp Team Executive,flousflow.whatsapp.team,group_whatsapp_executive,r,
-access_whatsapp_number_agent,WhatsApp Number Agent,flousflow.whatsapp.number,group_whatsapp_agent,r,
-access_whatsapp_number_supervisor,WhatsApp Number Supervisor,flousflow.whatsapp.number,group_whatsapp_supervisor,r,
-access_whatsapp_number_admin,WhatsApp Number Administrator,flousflow.whatsapp.number,group_whatsapp_admin,crud,
-access_whatsapp_number_executive,WhatsApp Number Executive,flousflow.whatsapp.number,group_whatsapp_executive,r,
-access_whatsapp_number_member_supervisor,WhatsApp Number User Rule Supervisor,flousflow.whatsapp.number.member,group_whatsapp_supervisor,r,
-access_whatsapp_number_member_admin,WhatsApp Number User Rule Administrator,flousflow.whatsapp.number.member,group_whatsapp_admin,crud,
-access_whatsapp_conversation_agent,WhatsApp Conversation Agent,flousflow.whatsapp.conversation,group_whatsapp_agent,ru,
-access_whatsapp_conversation_supervisor,WhatsApp Conversation Supervisor,flousflow.whatsapp.conversation,group_whatsapp_supervisor,cru,
-access_whatsapp_conversation_admin,WhatsApp Conversation Administrator,flousflow.whatsapp.conversation,group_whatsapp_admin,crud,
-access_whatsapp_conversation_executive,WhatsApp Conversation Executive,flousflow.whatsapp.conversation,group_whatsapp_executive,r,
-access_whatsapp_lock_agent,WhatsApp Conversation Lock Agent,flousflow.whatsapp.conversation.lock,group_whatsapp_agent,cru,
-access_whatsapp_lock_supervisor,WhatsApp Conversation Lock Supervisor,flousflow.whatsapp.conversation.lock,group_whatsapp_supervisor,cru,
-access_whatsapp_lock_admin,WhatsApp Conversation Lock Administrator,flousflow.whatsapp.conversation.lock,group_whatsapp_admin,crud,
-access_whatsapp_audit_supervisor,WhatsApp Audit Supervisor,flousflow.whatsapp.audit.event,group_whatsapp_supervisor,r,
-access_whatsapp_audit_admin,WhatsApp Audit Administrator,flousflow.whatsapp.audit.event,group_whatsapp_admin,cr,
-access_whatsapp_presence_agent,WhatsApp Presence Agent,flousflow.whatsapp.presence.interval,group_whatsapp_agent,r,
-access_whatsapp_presence_supervisor,WhatsApp Presence Supervisor,flousflow.whatsapp.presence.interval,group_whatsapp_supervisor,r,
-access_whatsapp_presence_admin,WhatsApp Presence Administrator,flousflow.whatsapp.presence.interval,group_whatsapp_admin,cru,
-access_whatsapp_presence_executive,WhatsApp Presence Executive,flousflow.whatsapp.presence.interval,group_whatsapp_executive,r,
-access_whatsapp_message_agent,WhatsApp Message Agent,flousflow.whatsapp.message,group_whatsapp_agent,r,
-access_whatsapp_message_supervisor,WhatsApp Message Supervisor,flousflow.whatsapp.message,group_whatsapp_supervisor,r,
-access_whatsapp_message_admin,WhatsApp Message Administrator,flousflow.whatsapp.message,group_whatsapp_admin,cru,
-access_whatsapp_message_executive,WhatsApp Message Executive,flousflow.whatsapp.message,group_whatsapp_executive,r,
-access_whatsapp_event_admin,WhatsApp Connector Event Administrator,flousflow.whatsapp.connector.event,group_whatsapp_admin,cru,
-access_whatsapp_transfer_agent,WhatsApp Transfer Agent,flousflow.whatsapp.transfer,group_whatsapp_agent,cr,
-access_whatsapp_transfer_supervisor,WhatsApp Transfer Supervisor,flousflow.whatsapp.transfer,group_whatsapp_supervisor,cru,
-access_whatsapp_transfer_admin,WhatsApp Transfer Administrator,flousflow.whatsapp.transfer,group_whatsapp_admin,cru,
-access_whatsapp_reply_agent,WhatsApp Canned Reply Agent,flousflow.whatsapp.canned.reply,group_whatsapp_agent,r,
-access_whatsapp_reply_supervisor,WhatsApp Canned Reply Supervisor,flousflow.whatsapp.canned.reply,group_whatsapp_supervisor,cru,
-access_whatsapp_reply_admin,WhatsApp Canned Reply Administrator,flousflow.whatsapp.canned.reply,group_whatsapp_admin,crud,
-access_whatsapp_nonce_admin,WhatsApp Connector Nonce Administrator,flousflow.whatsapp.connector.nonce,group_whatsapp_admin,r,
-access_whatsapp_cleanup_wizard_admin,WhatsApp Cleanup Wizard Administrator,flousflow.whatsapp.cleanup.wizard,group_whatsapp_admin,crud,
-access_whatsapp_transfer_wizard_agent,WhatsApp Transfer Wizard Agent,flousflow.whatsapp.transfer.wizard,group_whatsapp_agent,crud,
-access_whatsapp_takeover_wizard_supervisor,WhatsApp Takeover Wizard Supervisor,flousflow.whatsapp.takeover.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_handover_wizard_supervisor,WhatsApp Handover Wizard Supervisor,flousflow.whatsapp.handover.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_lead_wizard_agent,WhatsApp Lead Wizard Agent,flousflow.whatsapp.lead.wizard,group_whatsapp_agent,crud,
-access_whatsapp_sale_doc_wizard_agent,WhatsApp Sale Document Wizard Agent,flousflow.whatsapp.sale.document.wizard,group_whatsapp_agent,crud,
-access_whatsapp_sale_doc_wizard_supervisor,WhatsApp Sale Document Wizard Supervisor,flousflow.whatsapp.sale.document.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_sale_doc_wizard_admin,WhatsApp Sale Document Wizard Administrator,flousflow.whatsapp.sale.document.wizard,group_whatsapp_admin,crud,
-access_whatsapp_sale_send_wizard_agent,WhatsApp Sale Order Send Wizard Agent,flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_agent,crud,
-access_whatsapp_sale_send_wizard_supervisor,WhatsApp Sale Order Send Wizard Supervisor,flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_sale_send_wizard_admin,WhatsApp Sale Order Send Wizard Administrator,flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_admin,crud,
-access_whatsapp_statement_doc_wizard_agent,WhatsApp Statement Document Wizard Agent,flousflow.whatsapp.statement.document.wizard,group_whatsapp_agent,crud,
-access_whatsapp_statement_doc_wizard_supervisor,WhatsApp Statement Document Wizard Supervisor,flousflow.whatsapp.statement.document.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_statement_doc_wizard_admin,WhatsApp Statement Document Wizard Administrator,flousflow.whatsapp.statement.document.wizard,group_whatsapp_admin,crud,
-access_whatsapp_partner_statement_wizard_agent,Partner Statement Wizard Agent,flousflow.partner.statement.wizard,group_whatsapp_agent,crud,
-access_whatsapp_partner_statement_wizard_supervisor,Partner Statement Wizard Supervisor,flousflow.partner.statement.wizard,group_whatsapp_supervisor,crud,
-access_whatsapp_partner_statement_wizard_admin,Partner Statement Wizard Administrator,flousflow.partner.statement.wizard,group_whatsapp_admin,crud,
-access_whatsapp_partner_statement_line_agent,Partner Statement Line Agent,flousflow.partner.statement.line,group_whatsapp_agent,r,
-access_whatsapp_partner_statement_line_supervisor,Partner Statement Line Supervisor,flousflow.partner.statement.line,group_whatsapp_supervisor,r,
-access_whatsapp_partner_statement_line_admin,Partner Statement Line Administrator,flousflow.partner.statement.line,group_whatsapp_admin,r,
+access20_access_whatsapp_team_agent_r,WhatsApp Team Agent (r),flousflow.whatsapp.team,group_whatsapp_agent,r,"['|', ('member_ids', 'in', [user.id]), ('supervisor_ids', 'in', [user.id])]"
+access20_access_whatsapp_team_supervisor_r,WhatsApp Team Supervisor (r),flousflow.whatsapp.team,group_whatsapp_supervisor,r,
+access20_access_whatsapp_team_admin_crud,WhatsApp Team Administrator (crud),flousflow.whatsapp.team,group_whatsapp_admin,crud,"[(1, '=', 1)]"
+access20_access_whatsapp_team_executive_r,WhatsApp Team Executive (r),flousflow.whatsapp.team,group_whatsapp_executive,r,
+access20_access_whatsapp_number_agent_r,WhatsApp Number Agent (r),flousflow.whatsapp.number,group_whatsapp_agent,r,"['&', ('denied_user_ids', 'not in', [user.id]), '|', '|', '|', '|', ('allowed_user_ids', 'in', [user.id]), ('primary_team_id.member_ids', 'in', [user.id]), ('primary_team_id.supervisor_ids', 'in', [user.id]), ('allowed_team_ids.member_ids', 'in', [user.id]), ('allowed_team_ids.supervisor_ids', 'in', [user.id])]"
+access20_access_whatsapp_number_supervisor_r,WhatsApp Number Supervisor (r),flousflow.whatsapp.number,group_whatsapp_supervisor,r,
+access20_access_whatsapp_number_admin_crud,WhatsApp Number Administrator (crud),flousflow.whatsapp.number,group_whatsapp_admin,crud,"[(1, '=', 1)]"
+access20_access_whatsapp_number_executive_r,WhatsApp Number Executive (r),flousflow.whatsapp.number,group_whatsapp_executive,r,
+access20_access_whatsapp_number_member_supervisor_r,WhatsApp Number User Rule Supervisor (r),flousflow.whatsapp.number.member,group_whatsapp_supervisor,r,
+access20_access_whatsapp_number_member_admin_crud,WhatsApp Number User Rule Administrator (crud),flousflow.whatsapp.number.member,group_whatsapp_admin,crud,
+access20_access_whatsapp_conversation_agent_r,WhatsApp Conversation Agent (r),flousflow.whatsapp.conversation,group_whatsapp_agent,r,"['&', ('number_id.denied_user_ids', 'not in', [user.id]), '|', '|', '|', '|', ('number_id.allowed_user_ids', 'in', [user.id]), ('number_id.primary_team_id.member_ids', 'in', [user.id]), ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]), ('number_id.allowed_team_ids.member_ids', 'in', [user.id]), ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])]"
+access20_access_whatsapp_conversation_agent_u,WhatsApp Conversation Agent (u),flousflow.whatsapp.conversation,group_whatsapp_agent,u,"[('assigned_user_id', '=', user.id)]"
+access20_access_whatsapp_conversation_supervisor_cru,WhatsApp Conversation Supervisor (cru),flousflow.whatsapp.conversation,group_whatsapp_supervisor,cru,"['|', ('team_id.supervisor_ids', 'in', [user.id]), ('number_id.manager_user_id', '=', user.id)]"
+access20_access_whatsapp_conversation_admin_crud,WhatsApp Conversation Administrator (crud),flousflow.whatsapp.conversation,group_whatsapp_admin,crud,"[(1, '=', 1)]"
+access20_access_whatsapp_conversation_executive_r,WhatsApp Conversation Executive (r),flousflow.whatsapp.conversation,group_whatsapp_executive,r,
+access20_access_whatsapp_lock_agent_cu,WhatsApp Conversation Lock Agent (cu),flousflow.whatsapp.conversation.lock,group_whatsapp_agent,cu,"[('owner_user_id', '=', user.id)]"
+access20_access_whatsapp_lock_agent_r,WhatsApp Conversation Lock Agent (r),flousflow.whatsapp.conversation.lock,group_whatsapp_agent,r,"['&', ('number_id.denied_user_ids', 'not in', [user.id]), '|', '|', '|', '|', ('number_id.allowed_user_ids', 'in', [user.id]), ('number_id.primary_team_id.member_ids', 'in', [user.id]), ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]), ('number_id.allowed_team_ids.member_ids', 'in', [user.id]), ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])]"
+access20_access_whatsapp_lock_supervisor_cru,WhatsApp Conversation Lock Supervisor (cru),flousflow.whatsapp.conversation.lock,group_whatsapp_supervisor,cru,"['|', ('conversation_id.team_id.supervisor_ids', 'in', [user.id]), ('number_id.manager_user_id', '=', user.id)]"
+access20_access_whatsapp_lock_admin_crud,WhatsApp Conversation Lock Administrator (crud),flousflow.whatsapp.conversation.lock,group_whatsapp_admin,crud,"[(1, '=', 1)]"
+access20_access_whatsapp_audit_supervisor_r,WhatsApp Audit Supervisor (r),flousflow.whatsapp.audit.event,group_whatsapp_supervisor,r,
+access20_access_whatsapp_audit_admin_cr,WhatsApp Audit Administrator (cr),flousflow.whatsapp.audit.event,group_whatsapp_admin,cr,
+access20_access_whatsapp_presence_agent_r,WhatsApp Presence Agent (r),flousflow.whatsapp.presence.interval,group_whatsapp_agent,r,"[('user_id', '=', user.id)]"
+access20_access_whatsapp_presence_supervisor_r,WhatsApp Presence Supervisor (r),flousflow.whatsapp.presence.interval,group_whatsapp_supervisor,r,"[(1, '=', 1)]"
+access20_access_whatsapp_presence_admin_cru,WhatsApp Presence Administrator (cru),flousflow.whatsapp.presence.interval,group_whatsapp_admin,cru,"[(1, '=', 1)]"
+access20_access_whatsapp_presence_executive_r,WhatsApp Presence Executive (r),flousflow.whatsapp.presence.interval,group_whatsapp_executive,r,"[(1, '=', 1)]"
+access20_access_whatsapp_message_agent_r,WhatsApp Message Agent (r),flousflow.whatsapp.message,group_whatsapp_agent,r,"['&', ('number_id.denied_user_ids', 'not in', [user.id]), '|', '|', '|', '|', ('number_id.allowed_user_ids', 'in', [user.id]), ('number_id.primary_team_id.member_ids', 'in', [user.id]), ('number_id.primary_team_id.supervisor_ids', 'in', [user.id]), ('number_id.allowed_team_ids.member_ids', 'in', [user.id]), ('number_id.allowed_team_ids.supervisor_ids', 'in', [user.id])]"
+access20_access_whatsapp_message_supervisor_r,WhatsApp Message Supervisor (r),flousflow.whatsapp.message,group_whatsapp_supervisor,r,
+access20_access_whatsapp_message_admin_cru,WhatsApp Message Administrator (cru),flousflow.whatsapp.message,group_whatsapp_admin,cru,"[(1, '=', 1)]"
+access20_access_whatsapp_message_executive_r,WhatsApp Message Executive (r),flousflow.whatsapp.message,group_whatsapp_executive,r,
+access20_access_whatsapp_event_admin_cru,WhatsApp Connector Event Administrator (cru),flousflow.whatsapp.connector.event,group_whatsapp_admin,cru,
+access20_access_whatsapp_transfer_agent_cr,WhatsApp Transfer Agent (cr),flousflow.whatsapp.transfer,group_whatsapp_agent,cr,
+access20_access_whatsapp_transfer_supervisor_cru,WhatsApp Transfer Supervisor (cru),flousflow.whatsapp.transfer,group_whatsapp_supervisor,cru,
+access20_access_whatsapp_transfer_admin_cru,WhatsApp Transfer Administrator (cru),flousflow.whatsapp.transfer,group_whatsapp_admin,cru,
+access20_access_whatsapp_reply_agent_r,WhatsApp Canned Reply Agent (r),flousflow.whatsapp.canned.reply,group_whatsapp_agent,r,
+access20_access_whatsapp_reply_supervisor_cru,WhatsApp Canned Reply Supervisor (cru),flousflow.whatsapp.canned.reply,group_whatsapp_supervisor,cru,
+access20_access_whatsapp_reply_admin_crud,WhatsApp Canned Reply Administrator (crud),flousflow.whatsapp.canned.reply,group_whatsapp_admin,crud,
+access20_access_whatsapp_nonce_admin_r,WhatsApp Connector Nonce Administrator (r),flousflow.whatsapp.connector.nonce,group_whatsapp_admin,r,
+access20_access_whatsapp_cleanup_wizard_admin_crud,WhatsApp Cleanup Wizard Administrator (crud),flousflow.whatsapp.cleanup.wizard,group_whatsapp_admin,crud,
+access20_access_whatsapp_transfer_wizard_agent_crud,WhatsApp Transfer Wizard Agent (crud),flousflow.whatsapp.transfer.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_takeover_wizard_supervisor_crud,WhatsApp Takeover Wizard Supervisor (crud),flousflow.whatsapp.takeover.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_handover_wizard_supervisor_crud,WhatsApp Handover Wizard Supervisor (crud),flousflow.whatsapp.handover.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_lead_wizard_agent_crud,WhatsApp Lead Wizard Agent (crud),flousflow.whatsapp.lead.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_sale_doc_wizard_agent_crud,WhatsApp Sale Document Wizard Agent (crud),flousflow.whatsapp.sale.document.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_sale_doc_wizard_supervisor_crud,WhatsApp Sale Document Wizard Supervisor (crud),flousflow.whatsapp.sale.document.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_sale_doc_wizard_admin_crud,WhatsApp Sale Document Wizard Administrator (crud),flousflow.whatsapp.sale.document.wizard,group_whatsapp_admin,crud,
+access20_access_whatsapp_sale_send_wizard_agent_crud,WhatsApp Sale Order Send Wizard Agent (crud),flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_sale_send_wizard_supervisor_crud,WhatsApp Sale Order Send Wizard Supervisor (crud),flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_sale_send_wizard_admin_crud,WhatsApp Sale Order Send Wizard Administrator (crud),flousflow.whatsapp.sale.order.send.wizard,group_whatsapp_admin,crud,
+access20_access_whatsapp_statement_doc_wizard_agent_crud,WhatsApp Statement Document Wizard Agent (crud),flousflow.whatsapp.statement.document.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_statement_doc_wizard_supervisor_crud,WhatsApp Statement Document Wizard Supervisor (crud),flousflow.whatsapp.statement.document.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_statement_doc_wizard_admin_crud,WhatsApp Statement Document Wizard Administrator (crud),flousflow.whatsapp.statement.document.wizard,group_whatsapp_admin,crud,
+access20_access_whatsapp_partner_statement_wizard_agent_crud,Partner Statement Wizard Agent (crud),flousflow.partner.statement.wizard,group_whatsapp_agent,crud,
+access20_access_whatsapp_partner_statement_wizard_supervisor_crud,Partner Statement Wizard Supervisor (crud),flousflow.partner.statement.wizard,group_whatsapp_supervisor,crud,
+access20_access_whatsapp_partner_statement_wizard_admin_crud,Partner Statement Wizard Administrator (crud),flousflow.partner.statement.wizard,group_whatsapp_admin,crud,
+access20_access_whatsapp_partner_statement_line_agent_r,Partner Statement Line Agent (r),flousflow.partner.statement.line,group_whatsapp_agent,r,
+access20_access_whatsapp_partner_statement_line_supervisor_r,Partner Statement Line Supervisor (r),flousflow.partner.statement.line,group_whatsapp_supervisor,r,
+access20_access_whatsapp_partner_statement_line_admin_r,Partner Statement Line Administrator (r),flousflow.partner.statement.line,group_whatsapp_admin,r,
+access20_rule_whatsapp_team_company,Odoo 20 global restriction: rule_whatsapp_team_company,flousflow.whatsapp.team,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_number_company,Odoo 20 global restriction: rule_whatsapp_number_company,flousflow.whatsapp.number,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_number_member_company,Odoo 20 global restriction: rule_whatsapp_number_member_company,flousflow.whatsapp.number.member,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_conversation_company,Odoo 20 global restriction: rule_whatsapp_conversation_company,flousflow.whatsapp.conversation,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_lock_company,Odoo 20 global restriction: rule_whatsapp_lock_company,flousflow.whatsapp.conversation.lock,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_audit_company,Odoo 20 global restriction: rule_whatsapp_audit_company,flousflow.whatsapp.audit.event,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_presence_company,Odoo 20 global restriction: rule_whatsapp_presence_company,flousflow.whatsapp.presence.interval,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_message_company,Odoo 20 global restriction: rule_whatsapp_message_company,flousflow.whatsapp.message,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_event_company,Odoo 20 global restriction: rule_whatsapp_event_company,flousflow.whatsapp.connector.event,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_transfer_company,Odoo 20 global restriction: rule_whatsapp_transfer_company,flousflow.whatsapp.transfer,,crud,"[('company_id', 'in', company_ids)]"
+access20_rule_whatsapp_reply_company,Odoo 20 global restriction: rule_whatsapp_reply_company,flousflow.whatsapp.canned.reply,,crud,"[('company_id', 'in', company_ids)]"

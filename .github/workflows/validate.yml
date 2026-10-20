@@ -21,6 +21,11 @@ jobs:
         run: python -m compileall -q flousflow_whatsapp
       - name: Validate Odoo Apps release
         run: python flousflow_whatsapp/scripts/validate_release.py
+      - name: Test browser-independent JavaScript helpers
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --test flousflow_whatsapp/static/tests/*.test.mjs
       - name: Create isolated Odoo test database
         run: |
           docker network create whatsapp-test
