@@ -1,10 +1,10 @@
 {
     "name": "WhatsApp Shared Inbox",
-    "version": "19.0.1.6.5",
+    "version": "20.0.1.0.0",
     "category": "Sales/CRM",
     "summary": "Presence-aware shared WhatsApp inbox with CRM, Sales and Accounting bridges",
     "description": """
-Flous Flow WhatsApp is a self-contained Odoo 19 Community suite.
+Flous Flow WhatsApp is a self-contained Odoo 20 Community suite.
 
 Manage shared WhatsApp numbers, team access, conversations, routing, SLA,
 CRM handoff, HR operational availability, quotation delivery and customer
@@ -14,7 +14,7 @@ Highlights:
 - HMAC-signed connector webhooks (timestamp window + nonce replay protection)
 - Media policy validated on real file signatures (blocks disguised video)
 - Row-level conversation locks with lease/heartbeat and advisory locks
-- Multi-company safe security with Odoo 19 privileges and record rules
+- Multi-company safe security with Odoo 20 access controls and record rules
 - Idempotent inbound/outbound message handling
 - Send quotations and customer statements as PDFs from the inbox
 """,
@@ -32,7 +32,7 @@ Highlights:
     "depends": ["base", "mail", "bus", "contacts", "crm", "hr", "sale", "account", "web"],
     "data": [
         "security/security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/sequence.xml",
         "data/cron.xml",
         "reports/statement_report.xml",

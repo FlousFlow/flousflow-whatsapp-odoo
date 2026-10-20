@@ -63,7 +63,7 @@ class TestWhatsappIdempotency(WhatsAppCommon):
             content_base64=base64.b64encode(raw).decode(),
         ))
         self.assertEqual(message.message_type, "image")
-        self.assertEqual(message.attachment_id.raw, raw)
+        self.assertEqual(bytes(message.attachment_id.raw), raw)
         self.assertEqual(message.attachment_id.res_model, message._name)
         self.assertEqual(message.attachment_id.res_id, message.id)
 

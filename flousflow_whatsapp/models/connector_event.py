@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+from odoo.tools import BinaryBytes
 
 
 class FlousflowWhatsappConnectorEvent(models.Model):
@@ -97,7 +98,7 @@ class FlousflowWhatsappConnectorEvent(models.Model):
             )
             attachment = self.env["ir.attachment"].sudo().create({
                 "name": payload.get("filename") or "WhatsApp attachment",
-                "datas": base64.b64encode(raw),
+                "raw": BinaryBytes(raw, filename=payload.get("filename") or "WhatsApp attachment"),
                 "mimetype": payload.get("mimetype") or "application/octet-stream",
                 "res_model": "flousflow.whatsapp.message",
             })

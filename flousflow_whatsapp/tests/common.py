@@ -32,7 +32,7 @@ class WhatsAppCommon(TransactionCase):
 
     @classmethod
     def _make_company(cls, name):
-        """Create a company robustly across Odoo 19 module combinations.
+        """Create a company robustly across Odoo 20 module combinations.
 
         ``account``/``stock_account`` add required, NOT NULL columns to
         ``res.company`` (``inventory_period``, ``security_lead``). Fill the ones

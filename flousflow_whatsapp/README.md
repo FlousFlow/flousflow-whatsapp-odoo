@@ -1,6 +1,6 @@
 # Flous Flow WhatsApp
 
-A self-contained **Odoo 19 Community** suite: a presence-aware shared WhatsApp
+A self-contained **Odoo 20 Community** suite: a presence-aware shared WhatsApp
 inbox with CRM, Sales and Accounting bridges, all in **one module**.
 
 Formerly three modules (`flousflow_whatsapp_crm`, `flousflow_whatsapp_sale`,
@@ -35,8 +35,8 @@ Formerly three modules (`flousflow_whatsapp_crm`, `flousflow_whatsapp_sale`,
 
 ## Dependencies
 
-Odoo core only: `base`, `mail`, `bus`, `contacts`, `crm`, `hr`, `sale`,
-`account`, `web`.
+Odoo 20 Community or Enterprise (Python 3.12+) and core addons only: `base`,
+`mail`, `bus`, `contacts`, `crm`, `hr`, `sale`, `account`, `web`.
 
 ## Installation
 
@@ -124,7 +124,7 @@ this Odoo module. To avoid number bans and service interruptions the connector
   the declared MIME type. Video is blocked.
 - Record rules enforce multi-company isolation and per-number team access;
   audit events are immutable.
-- Odoo 19 privileges: `Agent`, `Supervisor`, `Administrator`, `Executive`.
+- Odoo 20 `ir.access` privileges: `Agent`, `Supervisor`, `Administrator`, `Executive`.
 
 ## Important WhatsApp Notice
 

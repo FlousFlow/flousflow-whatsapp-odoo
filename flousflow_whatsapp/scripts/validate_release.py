@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import ast
 import compileall
+import csv
 from pathlib import Path
 import sys
 import xml.etree.ElementTree as ET
@@ -14,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
     "__init__.py", "__manifest__.py", "README.md", "CHANGELOG.md",
     "CONNECTOR_COMPATIBILITY.md", "LICENSE", "static/description/icon.png",
-    "static/description/index.html",
+    "static/description/index.html", "security/ir.access.csv",
 ]
 FORBIDDEN_PARTS = {".git", "node_modules"}
 
@@ -33,8 +34,22 @@ if not manifest.get("installable") or not manifest.get("application"):
     fail("manifest must be installable and application=True")
 if manifest.get("license") not in {"LGPL-3", "OPL-1", "OEEL-1"}:
     fail("manifest license is missing or unsupported")
-if not str(manifest.get("version", "")).startswith("19.0."):
-    fail("manifest version must target Odoo 19")
+if not str(manifest.get("version", "")).startswith("20.0."):
+    fail("manifest version must target Odoo 20")
+
+with (ROOT / "security/ir.access.csv").open(encoding="utf-8", newline="") as stream:
+    access_rows = list(csv.DictReader(stream))
+expected_access_columns = ["id", "name", "model_id", "group_id/id", "operation", "domain"]
+if not access_rows or list(access_rows[0]) != expected_access_columns:
+    fail("security/ir.access.csv must use the Odoo 20 access schema")
+access_ids = [row["id"] for row in access_rows]
+if len(access_ids) != len(set(access_ids)):
+    fail("security/ir.access.csv contains duplicate record IDs")
+for row in access_rows:
+    if not row["model_id"] or not row["group_id/id"]:
+        fail(f"access row {row['id']} is missing a model or group")
+    if not row["operation"] or set(row["operation"]) - set("crud"):
+        fail(f"access row {row['id']} has an invalid operation set")
 
 for path in ROOT.rglob("*"):
     if any(part in FORBIDDEN_PARTS for part in path.parts):

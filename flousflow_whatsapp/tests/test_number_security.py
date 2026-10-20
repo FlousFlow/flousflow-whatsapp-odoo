@@ -71,8 +71,8 @@ class TestNumberSecurity(WhatsAppCommon):
             )
 
     def test_attachment_limit_cannot_exceed_global_cap(self):
-        self.env["ir.config_parameter"].sudo().set_param(
-            "flousflow_whatsapp.attachment_global_cap_mb", "10"
+        self.env["ir.config_parameter"].sudo().set_int(
+            "flousflow_whatsapp.attachment_global_cap_mb", 10
         )
         with self.assertRaises(ValidationError):
             self.number.write({"attachment_limit_mb": 11})

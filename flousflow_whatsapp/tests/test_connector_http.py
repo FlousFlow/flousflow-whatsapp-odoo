@@ -9,6 +9,7 @@ from datetime import timedelta
 
 from odoo import fields
 from odoo.tests import HttpCase, tagged
+from odoo.tools import BinaryBytes
 
 
 @tagged("post_install", "-at_install", "flousflow_whatsapp")
@@ -190,13 +191,13 @@ class TestWhatsappConnectorHttp(HttpCase):
 
     def test_oversized_body_is_rejected_before_json(self):
         parameter = "flousflow_whatsapp.connector_max_body_bytes"
-        self.env["ir.config_parameter"].sudo().set_param(parameter, str(1024 * 1024))
+        self.env["ir.config_parameter"].sudo().set_int(parameter, 1024 * 1024)
         body = b"{" + (b"x" * (1024 * 1024 + 1))
         try:
             response = self.url_open(self.events_url, data=body, headers=self._headers(body))
             self.assertEqual(response.status_code, 413)
         finally:
-            self.env["ir.config_parameter"].sudo().set_param(parameter, str(15 * 1024 * 1024))
+            self.env["ir.config_parameter"].sudo().set_int(parameter, 15 * 1024 * 1024)
 
     def test_outbox_claim_is_signed_and_session_scoped(self):
         response = self._post(
@@ -280,7 +281,7 @@ class TestWhatsappConnectorHttp(HttpCase):
         })
         attachment = self.env["ir.attachment"].create({
             "name": "invoice.pdf",
-            "datas": base64.b64encode(b"pdf-content"),
+            "raw": BinaryBytes(b"pdf-content"),
             "mimetype": "application/pdf",
         })
         message = self.env["flousflow.whatsapp.message"].create({
@@ -302,7 +303,7 @@ class TestWhatsappConnectorHttp(HttpCase):
 
     def test_attachment_download_rejects_unrelated_attachment(self):
         attachment = self.env["ir.attachment"].create({
-            "name": "private.txt", "datas": base64.b64encode(b"private"),
+            "name": "private.txt", "raw": BinaryBytes(b"private"),
         })
         response = self._post(
             f"/flousflow/whatsapp/v1/attachments/{attachment.id}",

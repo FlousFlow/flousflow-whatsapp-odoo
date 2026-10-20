@@ -38,7 +38,7 @@ class TestPartnerStatement(WhatsAppCommon):
 
         Journal entries with explicit debit/credit are the most reliable way to
         seed receivable history for the statement (direct invoice creation in
-        Odoo 19 requires a fuller sale/tax setup).
+        Odoo 20 requires a fuller sale/tax setup).
         """
         income = self.env["account.account"].search([
             ("account_type", "=", "income"),

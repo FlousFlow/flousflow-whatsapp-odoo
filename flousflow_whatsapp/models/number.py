@@ -213,7 +213,7 @@ class FlousflowWhatsappNumber(models.Model):
             raise ValidationError(_("Unsupported connector operation."))
         if not self.connector_session_key:
             self.connector_session_key = f"ffw_{secrets.token_urlsafe(24)}"
-        base_url = (self.env["ir.config_parameter"].sudo().get_param(
+        base_url = (self.env["ir.config_parameter"].sudo().get_str(
             "flousflow_whatsapp.connector_url"
         ) or "").strip().rstrip("/")
         parsed = urlsplit(base_url)
@@ -319,13 +319,9 @@ class FlousflowWhatsappNumber(models.Model):
 
     @api.constrains("attachment_limit_mb")
     def _check_attachment_global_cap(self):
-        raw_cap = self.env["ir.config_parameter"].sudo().get_param(
-            "flousflow_whatsapp.attachment_global_cap_mb", "10"
-        )
-        try:
-            global_cap = max(1, int(raw_cap))
-        except (TypeError, ValueError):
-            global_cap = 10
+        global_cap = max(1, self.env["ir.config_parameter"].sudo().get_int(
+            "flousflow_whatsapp.attachment_global_cap_mb", 10
+        ))
         for number in self:
             if number.attachment_limit_mb > global_cap:
                 raise ValidationError(

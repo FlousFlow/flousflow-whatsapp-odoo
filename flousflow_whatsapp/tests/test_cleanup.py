@@ -39,7 +39,7 @@ class TestWhatsappCleanup(WhatsAppCommon):
             self.env.flush_all()
 
     def test_admin_can_start_self_hosted_connector_from_odoo(self):
-        self.env["ir.config_parameter"].sudo().set_param(
+        self.env["ir.config_parameter"].sudo().set_str(
             "flousflow_whatsapp.connector_url", "http://connector.internal:8787"
         )
         response = MagicMock()

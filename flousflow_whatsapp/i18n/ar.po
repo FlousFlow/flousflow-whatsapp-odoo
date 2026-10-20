@@ -4,7 +4,7 @@
 #
 
 msgid ""
-msgstr "Project-Id-Version: Odoo Server 19.0\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2026-07-21 11:54+0000\nPO-Revision-Date: 2026-07-21 11:54+0000\nLast-Translator: \nLanguage-Team: Arabic\nLanguage: ar_001\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: \nPlural-Forms: \n"
+msgstr "Project-Id-Version: Odoo Server 20.0\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2026-07-21 11:54+0000\nPO-Revision-Date: 2026-07-21 11:54+0000\nLast-Translator: \nLanguage-Team: Arabic\nLanguage: ar_001\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: \nPlural-Forms: \n"
 
 #. module: flousflow_whatsapp
 #. odoo-python

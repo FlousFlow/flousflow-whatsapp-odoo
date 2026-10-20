@@ -17,13 +17,10 @@ class FlousflowWhatsappConnectorController(http.Controller):
 
     def _signed_payload(self):
         raw_body = request.httprequest.get_data(cache=True)
-        raw_limit = request.env["ir.config_parameter"].sudo().get_param(
-            "flousflow_whatsapp.connector_max_body_bytes", str(15 * 1024 * 1024)
+        max_body_bytes = request.env["ir.config_parameter"].sudo().get_int(
+            "flousflow_whatsapp.connector_max_body_bytes", 15 * 1024 * 1024
         )
-        try:
-            max_body_bytes = max(1024, min(int(raw_limit), 16 * 1024 * 1024))
-        except (TypeError, ValueError):
-            max_body_bytes = 15 * 1024 * 1024
+        max_body_bytes = max(1024, min(max_body_bytes, 16 * 1024 * 1024))
         verify_signed_request(
             request.env, raw_body, request.httprequest.headers, max_body_bytes=max_body_bytes
         )
@@ -218,7 +215,7 @@ class FlousflowWhatsappConnectorController(http.Controller):
             if not message:
                 raise ConnectorRequestError(404, "unknown_attachment", "Attachment was not found for this session.")
             attachment = message.attachment_id
-            raw = attachment.raw or b""
+            raw = bytes(attachment.raw or b"")
             max_bytes = min(number.attachment_limit_mb, 10) * 1024 * 1024
             if len(raw) > max_bytes:
                 raise ConnectorRequestError(413, "attachment_too_large", "Attachment exceeds the session limit.")

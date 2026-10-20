@@ -74,7 +74,7 @@ class FlousflowPartnerStatementWizard(models.TransientModel):
 
     def _get_accounts(self):
         self.ensure_one()
-        # Odoo 19 uses ``company_ids`` (m2m) on account.account, not company_id.
+        # Odoo 20 uses ``company_ids`` (m2m) on account.account, not company_id.
         return self.env["account.account"].search(
             [
                 ("company_ids", "in", [self.company_id.id]),

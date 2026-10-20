@@ -1,5 +1,11 @@
 # Changelog
 
+## 20.0.1.0.0 - 2026-10-20
+
+- Port the addon to Odoo 20's `ir.access` security records.
+- Use typed configuration parameter APIs and the Odoo 20 binary attachment API.
+- Update metadata, release validation, and CI for the `20.0` branch.
+
 ## 19.0.1.6.5 - 2026-08-13
 
 - Open Inbox through its native Odoo client action so WhatsApp becomes the

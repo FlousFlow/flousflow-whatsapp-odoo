@@ -1,8 +1,8 @@
-# WhatsApp Shared Inbox for Odoo 19
+# WhatsApp Shared Inbox for Odoo 20
 
-Official source repository for the `flousflow_whatsapp` Odoo 19 addon.
+Official source repository for the `flousflow_whatsapp` Odoo 20 addon.
 
-The Odoo Apps repository branch is `19.0`. The installable addon is located in
+The Odoo Apps repository branch is `20.0`. The installable addon is located in
 the `flousflow_whatsapp/` directory. The separately deployed self-hosted
 connector is available at:
 
@@ -14,7 +14,7 @@ installation, security and connector compatibility.
 ## Odoo Apps repository URL
 
 ```text
-ssh://git@github.com/FlousFlow/flousflow-whatsapp-odoo.git#19.0
+ssh://git@github.com/FlousFlow/flousflow-whatsapp-odoo.git#20.0
 ```
 
 ## License

@@ -2,9 +2,9 @@ name: Validate Odoo addon
 
 on:
   push:
-    branches: ["19.0"]
+    branches: ["20.0"]
   pull_request:
-    branches: ["19.0"]
+    branches: ["20.0"]
 
 permissions:
   contents: read
@@ -21,3 +21,35 @@ jobs:
         run: python -m compileall -q flousflow_whatsapp
       - name: Validate Odoo Apps release
         run: python flousflow_whatsapp/scripts/validate_release.py
+      - name: Create isolated Odoo test database
+        run: |
+          docker network create whatsapp-test
+          docker run -d --rm --name whatsapp-test-db --network whatsapp-test \
+            -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres \
+            postgres:17-alpine
+          for attempt in $(seq 1 30); do
+            if docker exec whatsapp-test-db pg_isready -U odoo -d postgres; then
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs whatsapp-test-db
+          exit 1
+      - name: Install addon and run Odoo 20 tests
+        run: |
+          docker run --rm --network whatsapp-test \
+            -e PYTHONDONTWRITEBYTECODE=1 \
+            -v "$PWD/flousflow_whatsapp:/mnt/extra-addons/flousflow_whatsapp:ro" \
+            odoo:20.0 odoo \
+            --db_host=whatsapp-test-db --db_port=5432 \
+            --db_user=odoo --db_password=odoo \
+            --database=flousflow_whatsapp_test \
+            --addons-path=/mnt/extra-addons,/usr/lib/python3/dist-packages/odoo/addons \
+            --init=flousflow_whatsapp --test-enable \
+            --test-tags=/flousflow_whatsapp --stop-after-init \
+            --http-port=8071 --log-level=test
+      - name: Clean up test containers
+        if: always()
+        run: |
+          docker rm -f whatsapp-test-db || true
+          docker network rm whatsapp-test || true

@@ -4,6 +4,7 @@ from datetime import timedelta
 
 from odoo import api, fields, models, _
 from odoo.exceptions import AccessError, ValidationError
+from odoo.tools import BinaryBytes
 
 
 class FlousflowWhatsappMessage(models.Model):
@@ -145,7 +146,7 @@ class FlousflowWhatsappMessage(models.Model):
             attachment = self.env["ir.attachment"].sudo().create(
                 {
                     "name": filename or "WhatsApp attachment",
-                    "datas": base64.b64encode(raw),
+                    "raw": BinaryBytes(raw, filename=filename or "WhatsApp attachment"),
                     "mimetype": mimetype,
                     "res_model": self._name,
                 }
@@ -300,13 +301,9 @@ class FlousflowWhatsappMessage(models.Model):
         and schedules a retry so they are not silently lost.
         """
         now = now or fields.Datetime.now()
-        raw = self.env["ir.config_parameter"].sudo().get_param(
-            "flousflow_whatsapp.outbound_stale_minutes", "15"
-        )
-        try:
-            minutes = max(1, int(raw))
-        except (TypeError, ValueError):
-            minutes = 15
+        minutes = max(1, self.env["ir.config_parameter"].sudo().get_int(
+            "flousflow_whatsapp.outbound_stale_minutes", 15
+        ))
         cutoff = now - timedelta(minutes=minutes)
         stale = self.sudo().search(
             [
